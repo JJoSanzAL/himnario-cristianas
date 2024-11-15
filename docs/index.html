@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himnario Cristianas</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="docs/manifest.json">
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            navigator.serviceWorker.register('/docs/service-worker.js').then(function(registration) {
                 console.log('Service Worker registrado con éxito:', registration.scope);
             }, function(error) {
                 console.log('Registro de Service Worker fallido:', error);
@@ -117,6 +117,6 @@
             <!-- Agrega más canciones aquí -->
         </ul>
     </main>
-    <script src="scripts.js"></script>
+    <script src="docs/scripts.js"></script>
 </body>
 </html>

@@ -2,10 +2,10 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open('himnario-cache').then((cache) => {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/styles.css',
-        '/scripts.js',
+        '/docs/',
+        '/docs/index.html',
+        '/docs/styles.css',
+        '/docs/scripts.js',
         // Lista de archivos adicionales que quieras cachear
       ]);
     })
