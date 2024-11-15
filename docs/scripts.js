@@ -1,14 +1,13 @@
-function filterSongs() {
-    let input = document.getElementById('search-bar').value.toLowerCase();
-    let songList = document.getElementById('song-list');
-    let songs = songList.getElementsByTagName('li');
+document.getElementById('search').addEventListener('input', function() {
+    let filter = this.value.toLowerCase();
+    let songs = document.querySelectorAll('.song');
 
-    for (let i = 0; i < songs.length; i++) {
-        let song = songs[i].textContent.toLowerCase();
-        if (song.includes(input)) {
-            songs[i].style.display = "";
+    songs.forEach(function(song) {
+        let title = song.querySelector('h2').textContent.toLowerCase();
+        if (title.indexOf(filter) > -1) {
+            song.style.display = '';
         } else {
-            songs[i].style.display = "none";
+            song.style.display = 'none';
         }
-    }
-}
+    });
+});
