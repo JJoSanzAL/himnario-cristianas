@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himnario Cristianas</title>
+    <title>Himnario Cristiano</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('Service Worker registrado con éxito:', registration.scope);
+            }, function(error) {
+                console.log('Registro de Service Worker fallido:', error);
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
