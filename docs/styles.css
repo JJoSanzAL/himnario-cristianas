@@ -12,6 +12,7 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     z-index: 1000; /* Asegura que esté por encima del contenido */
+	tex-align: center; /* Centra el contenido del encabezado*/
 }
 
 .search-container {
@@ -29,20 +30,24 @@ header {
 
 main {
     margin-top: 100px; /* Ajusta esto si tu header es más grande */
+	padding: 20px;
 }
 
 .song {
     margin: 20px;
     padding: 20px;
     border-bottom: 1px solid #ddd;
+	max-width: 800px; /* Limita el ancho máximo de cada canción */
 }
 
 .song-title {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+	text-align: center; /* Centra el título de la canción */
 }
 
 .verse, .chorus {
     margin: 10px 0;
+	text-align: center;
 }
