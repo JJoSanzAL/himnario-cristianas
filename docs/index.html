@@ -1,901 +1,931 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Himnario Cristiano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himnario Cristianas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('Service Worker registrado con éxito:', registration.scope);
+            }, function(error) {
+                console.log('Registro de Service Worker fallido:', error);
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Himnario Cristiano</h1>
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Buscar himno...">
-        </div>
+        <h1>Letras de Canciones</h1>
+        <input type="text" id="search" placeholder="Buscar canción...">
     </header>
-    <main>
-<p class="verse"><!DOCTYPE html></p>
-<p class="verse"><html lang="es"></p>
-<p class="verse"><head></p>
-<p class="verse"><meta charset="UTF-8"></p>
-<p class="verse"><meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
-<p class="verse"><title>Himnario Cristianas</title></p>
-<p class="verse"><link rel="stylesheet" href="styles.css"></p>
-<p class="verse"><link rel="manifest" href="manifest.json"></p>
-<p class="verse"><script></p>
-<p class="verse">if ('serviceWorker' in navigator) {</p>
-<p class="verse">navigator.serviceWorker.register('/service-worker.js').then(function(registration) {</p>
-<p class="verse">console.log('Service Worker registrado con éxito:', registration.scope);</p>
-<p class="verse">}, function(error) {</p>
-<p class="verse">console.log('Registro de Service Worker fallido:', error);</p>
-<p class="verse">});</p>
-<p class="verse">}</p>
-<p class="verse"></script></p>
-<p class="verse"></head></p>
-<p class="verse"><body></p>
-<p class="verse"><header></p>
-<p class="verse"><h1>Letras de Canciones</h1></p>
-<p class="verse"><input type="text" id="search" placeholder="Buscar canción..."></p>
-<p class="verse"></header></p>
-<p class="verse"><main id="songs"></p>
-<p class="verse"><!-- Canción 1 --></p>
-<p class="verse"><section class="song" id="song1"></p>
-<p class="verse"><h2 class="song-title">1. EL APOSENTO ALTO</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>En un aposento alto,<br>Con unánime fervor<br>Ciento veinte esperaban<br>La promesa del Señor</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>///Dios manda tu gran poder///<br>A cada corazón</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Con estruendo de los cielos<br>Descendió la gran virtud;<br>Todos fueron bautizados<br>Con el Santo Espíritu</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Este gran poder antiguo<br>Es del fiel, celeste don;<br>Prometido a los creyentes<br>De humilde corazón.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Dios está restituyendo<br>Este gran Pentecostés.<br>Y el Espíritu sus dones<br>Nos reparte otra vez.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 2 --></p>
-<p class="verse"><section class="song" id="song2"></p>
-<p class="verse"><h2 class="song-title">2. LLUVIAS DE GRACIAS</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Dios nos ha dado promesa;<br>Lluvias de gracia enviaré,<br>Dones que os den fortaleza;<br>Gran bendición os daré.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Lluvias de gracia,<br>Lluvias pedimos, Señor,<br>Mándanos lluvias copiosas,<br>Lluvias del Consolador.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Cristo nos dio la promesa,<br>Del Santo Consolador,<br>Dándonos paz y pureza,<br>Para su gloria y honor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>¡Oh Dios, a todo creyente,<br>Muestra tu amor y poder!<br>Tú eres de gracia la fuente,<br>Llena de paz nuestro ser.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Obra en tus siervos piadosos<br>Celo, virtud y valor,<br>Dándonos dones preciosos,<br>Dones del Consolador.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 3 --></p>
-<p class="verse"><section class="song" id="song3"></p>
-<p class="verse"><h2 class="song-title">3. JESÚS VENDRÁ OTRA VEZ</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Yo espero el día alegre cuando Cristo volverá,<br>Pues vendrá al mundo pronto y nos arrebatará;<br>¡Oh, qué gozo este pensamiento a mi alma da:<br>¡El que Cristo venga al mundo otra vez!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>¡Oh! Jesús vendrá al mundo otra vez,<br>Sí, Jesús vendrá al mundo otra vez;<br>Le veremos en las nubes con los ángeles de luz,<br>Cuando Cristo venga al mundo otra vez.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>La venida de Jesús será el remedio del dolor,<br>Que aflige siempre a este pobre mundo pecador;<br>Toda lágrima se enjugará por nuestro Salvador,<br>Cuando Cristo venga al mundo otra vez.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Llegarán los santos a Sion con gozo eternal;<br>Y en todo el santo monte nada daña ni hace mal,<br>Pues conocerán a Dios, entonces, todos por igual,<br>Cuando Cristo venga al mundo otra vez.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>El pecado, pena y muerte en este mundo cesarán<br>Mártires y santos con Jesús por siempre reinarán,<br>Cada alma gozará de paz perfecta, sin afán,<br>Cuando Cristo venga al mundo otra vez.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 4 --></p>
-<p class="verse"><section class="song" id="song4"></p>
-<p class="verse"><h2 class="song-title">4. DULCE COMUNIÓN</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Dulce comunión la que gozo ya<br>En los brazos de mi Salvador.<br>¡Qué gran bendición en su paz me da!<br>¡Oh!, yo siento en mí su tierno amor</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Libre, salvo, del pecado y del temor,<br>Libre, salvo, en los brazos de mi Salvador.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br> ¡Cuán dulce es vivir, cuán dulce es gozar!<br>En los brazos de mi Salvador<br>Allí quiero ir y con Él morar,<br>Siendo objeto de su tierno amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>No hay que temer, ni que desconfiar,<br>en los brazos de mi Salvador.<br>Por su gran poder Él me guardará<br>de los lazos del engañador.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 5 --></p>
-<p class="verse"><section class="song" id="song5"></p>
-<p class="verse"><h2 class="song-title">5. DESDE QUE SALVO ESTOY</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Yo tengo un himno de loor,<br>Desde que salvo estoy,<br>Para mi Rey, mi Salvador,<br>Desde que salvo estoy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Desde que salvo estoy<br>Desde que salvo estoy<br>Sólo en él me gloriaré;<br>Desde que salvo estoy,<br>En mi Salvador me gloriaré.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Yo tengo un Cristo, y mi ansiedad<br>Desde que salvo estoy,<br>Está en cumplir su voluntad<br>Desde que salvo estoy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Yo tengo un gozo que él me dio,<br>Desde que salvo estoy,<br>Cuando en su sangre me lavó<br>Desde que salvo estoy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Tengo un hogar a donde iré,<br>Desde que salvo estoy,<br>Y allí seguro viviré<br>Desde que salvo estoy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 6 --></p>
-<p class="verse"><section class="song" id="song6"></p>
-<p class="verse"><h2 class="song-title">6. HABLA JESÚS QUERIDO</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Habla, Jesús querido; ¡háblame hoy sí!<br>Habla con tu gran bondad; queda cerca de mí<br>Mi corazón abierto está, para tu voz oír<br>Lléname de alabanzas y gozo para servir.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Háblame suavemente, habla con mucho amor<br>Vencedor para siempre, lléname de gozo<br>Háblame cada día por el Consolador<br>Oír tu voz necesito y te busco con fervor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Hacia tus hijos habla en buen camino estoy<br>Por tu bondad nos guía en pedirte el santo don<br>Queremos consagrarnos y tú presencia buscar<br>Fielmente obedecerte y siempre adorar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Como el tiempo antiguo tu ley mandaste seguir<br>Muéstranos tu voluntad para irnos hacia ti<br>Déjame engrandecerte quiero a ti alabar<br>Cantar alegremente siempre te quiero honrar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 7 --></p>
-<p class="verse"><section class="song" id="song7"></p>
-<p class="verse"><h2 class="song-title">7. TODO A CRISTO YO ME RINDO</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Todo a Cristo yo me rindo<br>Con el fin de serle fiel;<br>Para siempre quiero amarle,<br>Y agradarle sólo a él.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Yo me rindo a él,<br>Yo me rindo a él,<br>Todo a Cristo yo me entrego,<br>Quiero serle fiel.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Todo a Cristo yo me rindo,<br>A sus pies postrado estoy,<br>Los placeres he dejado,<br>Y le sigo desde hoy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Todo a Cristo yo me rindo,<br>Sí, de todo corazón;<br>Yo le entrego alma y cuerpo,<br>Busco hoy su santa unción.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Todo a Cristo he rendido,<br>Siento el fuego de su amor,<br>¡Oh, que gozo hay en mi alma!<br>¡Gloria, gloria a mi Señor!</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 8 --></p>
-<p class="verse"><section class="song" id="song8"></p>
-<p class="verse"><h2 class="song-title">8. LA SIEMBRA</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Sembraré la simiente preciosa<br>Del glorioso evangelio de amor;<br>Sembraré, sembraré mientras viva,<br>Dejaré el resultado al Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Sembraré, sembraré,<br>Mientras viva simiente de amor.<br>Segaré, segaré,<br>Al hallarme en la casa de Dios.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Sembraré en corazones sensibles<br>La doctrina del Dios de perdón;<br>Sembraré, sembraré mientras viva,<br>Dejaré el resultado al Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Sembraré en corazones de mármol<br>La bendita palabra de Dios;<br>Sembraré, sembraré mientras viva,<br>Dejaré el resultado al Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 9 --></p>
-<p class="verse"><section class="song" id="song9"></p>
-<p class="verse"><h2 class="song-title">9. GLORIA SIN FIN</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Cuando mis luchas terminen aquí<br>Y ya seguro en los cielos esté;<br>cuando al Señor mire cerca de mí,<br>¡Por las edades mi gloria será!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>¡Esa será, gloria sin fin,<br>gloria sin fin, gloria sin fin!<br>Cuando por gracia su faz pueda ver,<br>¡Esa mi gloria sin fin ha de ser!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Cuando por gracia yo pueda tener<br>En sus mansiones morada de paz,<br>Y que allí siempre su faz pueda ver,<br>¡Por las edades mi gloria será!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Gozo infinito será contemplar,<br>Todos los seres que yo tanto amé;<br>Más la presencia de Cristo gozar,<br>¡Por las edades mi gloria será!</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 10 --></p>
-<p class="verse"><section class="song" id="song10"></p>
-<p class="verse"><h2 class="song-title">10. CRISTO QUIERE LIMPIOS CORAZONES</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Cristo busca limpios corazones,<br>Que le sirvan siempre con fidelidad;<br>Que a los pecadores insten fervorosos<br>Que se vuelvan del pecado a la verdad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Id a trabajar allá en los campos del Señor,<br>Que para la siega se presentan blancos hoy<br>Oh, fieles siervos de Dios,<br>A quien debéis todo honor,<br>Oíd su voz, salid a trabajar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Labios puros Cristo necesita,<br>Que con gozo anuncien plena salvación;<br>Lenguas consagradas sólo a su servicio,<br>Que proclamen al cautivo redención.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Cristo busca manos bien dispuestas<br>Para trabajar con buena voluntad;<br>Siembras ya maduras piden vuestra ayuda,<br>Las doradas mieses pronto cosechad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Vidas santas Cristo necesita,<br>Que a los pecadores muestren su poder;<br>Libres de ansiedades, en Jesús confiadas<br>Y que pueda de ellas siempre disponer.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 11 --></p>
-<p class="verse"><section class="song" id="song11"></p>
-<p class="verse"><h2 class="song-title">11. CARIÑOSO SALVADOR</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Cariñoso Salvador,<br>Huyo de la tempestad<br>A tu seno protector,<br>Fiándome de tu bondad.<br>Sálvame, Señor Jesús,<br>De las olas del turbión;<br>Hasta el puerto de salud<br>Guía mi pobre embarcación.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Otro asilo ninguno hay,<br>Indefenso acudo a ti;<br>Mi necesidad me trae,<br>Porque mi peligro vi.<br>Solamente en ti, Señor,<br>Hallo paz, consuelo y luz;<br>Vengo con ferviente amor<br>A los pies de mi Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Cristo, encuentro todo en ti,<br>Y no necesito más;<br>Caído, me pusiste en pie,<br>Débil, ánimo me das.<br>Al enfermo das salud,<br>Das la vista al que no ve.<br>Con amor y gratitud<br>Tu bondad ensalzaré.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 12 --></p>
-<p class="verse"><section class="song" id="song12"></p>
-<p class="verse"><h2 class="song-title">12. ROCA DE LA ETERNIDAD</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Roca de la eternidad,<br>Fuiste abierta para mí,<br>Sé mi escondedero fiel,<br>Solo encuentro paz en ti,<br>Rico, limpio manantial,<br>En el cual lavado fui.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Aunque fuese siempre fiel,<br>Aunque llore sin cesar.<br>Del pecado no podré,<br>Justificación lograr,<br>Sólo en ti teniendo fe,<br>Deuda tal podré pagar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Mientras tenga que vivir,<br>Mi último suspiro al dar<br>Cuando vaya a responder<br>En tu augusto tribunal,<br>Sé mi escondedero fiel,<br>Roca de la eternidad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 13 --></p>
-<p class="verse"><section class="song" id="song13"></p>
-<p class="verse"><h2 class="song-title">13. DULCE ORACIÓN</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Dulce oración, dulce oración,<br>De toda influencia mundanal<br>Elevas tú mi corazón,<br>Al tierno Padre celestial.<br>¡Oh! cuántas veces tuve en ti<br>Auxilio en ruda tentación,<br>Y cuantos bienes recibí,<br>Mediante ti, dulce oración.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Dulce oración, dulce oración,<br>Al trono excelso de bondad.<br>Tú llevarás mi petición a Dios<br>Que escucha con piedad;<br>Por fe espero recibir<br>La gran divina bendición.<br>Y siempre a mi Señor servir<br>Por tu virtud, dulce oración.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Dulce oración, dulce oración,<br>Que aliento y gozo al alma das,<br>En esta tierra de aflicción<br>Consuelo siempre me serás.<br>Hasta el momento en que veré<br>Francas las puertas de Sión,<br>Entonces me despediré<br>Feliz, de ti, dulce oración.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 14 --></p>
-<p class="verse"><section class="song" id="song14"></p>
-<p class="verse"><h2 class="song-title">14. ¡OH QUE AMIGO!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>¡Oh qué amigo nos es Cristo!<br>Él llevó nuestro dolor,<br>Y nos manda que llevemos<br>Todo a Dios en oración.<br>¿Vive el hombre desprovisto<br>de paz, gozo y santo amor?<br>Esto es porque no llevamos<br>Todo a Dios en oración.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>¿Vives débil y cargado<br>De cuidados y temor?<br>A Jesús, refugio eterno,<br>Dile todo en oración.<br>¿Te desprecian tus amigos?<br>Cuéntaselo en oración;<br>En sus brazos de amor tierno<br>Paz tendrá tu corazón.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Jesucristo es nuestro Amigo:<br>De esto prueba él nos dio,<br>Al sufrir el cruel castigo,<br>Que el culpable mereció;<br>Y su pueblo redimido<br>Hallará seguridad,<br>Fiando en este Amigo eterno,<br>Y esperando en su bondad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 15 --></p>
-<p class="verse"><section class="song" id="song15"></p>
-<p class="verse"><h2 class="song-title">15. FIRMES Y ADELANTE</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Firmes y adelante, huestes de la fe.<br>Sin temor alguno, que Jesús nos ve.<br>Jefe soberano, Cristo al frente va.<br>Y la regia enseña tremolando está.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Firmes y adelante huestes de la fe,<br>Sin temor alguno que Jesús nos ve.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Al Sagrado nombre de nuestro Adalid,<br>Tiembla el enemigo y huye de la lid.<br>Nuestra es la victoria, dad a Dios loor,<br>Y óigalo el averno, lleno de pavor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Muévase potente la Iglesia de Dios,<br>De los ya gloriosos marchamos en pos,<br>Somos sólo un cuerpo, y uno es el Señor,<br>Una la esperanza, y uno nuestro amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Tronos y coronas pueden perecer,<br>De Jesús la Iglesia fiel habrá de ser,<br>Nada en contra suya, prevalecerá,<br>Porque la promesa nunca faltará.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 16 --></p>
-<p class="verse"><section class="song" id="song16"></p>
-<p class="verse"><h2 class="song-title">16. CERCA DE TI, SEÑOR</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Cerca de ti Señor<br>Quiero morar;<br>Tu grande, tierno amor<br>Quiero gozar.<br>Llena mi pobre ser,<br>Limpia mi corazón<br>Hazme tu rostro ver<br>En comunión.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Pasos inciertos doy,<br> El sol se va;<br>Más si contigo estoy,<br> no temo ya.<br>Himnos de gratitud,<br>ferviente cantaré<br>Y fiel a ti, Jesús,<br>Siempre seré.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Día feliz veré<br>Creyendo en ti,<br>En que yo habitaré,<br>Cerca de ti.<br>Mi voz alabará,<br>Tu dulce nombre allí,<br>Y mi alma gozará,<br>Cerca de ti.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 17 --></p>
-<p class="verse"><section class="song" id="song17"></p>
-<p class="verse"><h2 class="song-title">17. MI FE ESPERA EN TI</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Mi fe espera en ti,<br>Cordero, quien por mí<br>fuiste a la cruz.<br>Escucha mi oración,<br>dame tu bendición;<br>llene mi corazón tu santa luz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Tu gracia en mi alma pon;<br>guarde mi corazón<br>tu sumo amor.<br>Tu sangre carmesí<br>diste en la cruz por mí;<br>que viva para ti, con fiel ardor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>A ruda lid iré,<br>y pruebas hallaré;<br>mi guía sé.<br>Líbrame de ansiedad,<br>guárdame en santidad,<br>y por la eternidad te alabaré.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 18 --></p>
-<p class="verse"><section class="song" id="song18"></p>
-<p class="verse"><h2 class="song-title">18. GRATO ES DECIR LA HISTORIA</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Grato es decir la historia<br>Del celestial favor,<br>De Cristo y de su gloria,<br>De Cristo y de su amor.<br>Me agrada referirla,<br>Pues sé que es la verdad;<br>Y nada satisface<br>Cual ella mi ansiedad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>¡Cuán bella es esta historia!<br>Mi tema allá en la gloria<br>Será la antigua historia<br>De Cristo y de su amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Grato es decir la historia<br>Que billa cual fanal,<br>Y en glorias y portentos<br>No reconoce igual;<br>Me agrada referirla,<br>Pues me hace mucho bien,<br>Por eso a ti deseo,<br>Decírtela también.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Grato es decir la historia<br>que antigua, sin vejez,<br>Parece al repetirla,<br> más dulce cada vez;<br>Me agrada referirla,<br>pues hay quien nunca oyó<br>Que para hacerle salvo<br>El buen Jesús murió.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 19 --></p>
-<p class="verse"><section class="song" id="song19"></p>
-<p class="verse"><h2 class="song-title">19. ¿OYES CÓMO EL EVANGELIO?</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>¿Oyes cómo el evangelio<br>al cansado ofrece paz?<br>Pues segura, oh alma mía,<br>La promesa a ti se da.<br>Bien alguno en mí no veo,<br>Corrupción tan sólo hay.<br>Yo cansado y afligido<br>Busco alivio con afán.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>En el arca la paloma<br>Encontró do reposar;<br>Para mi alma atribulada<br>El Señor arca será.<br>Combatido vengo, y crece<br>El diluvio sin cesar.<br>Ábreme, Jesús, y en vano<br>Rugirá la tempestad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Amparada ya en tu seno<br>Puede el alma respirar;<br>El reposo que prometes<br>Siempre da segura paz.<br>¡Oh! Cuán dulce en mis oídos<br>Fue tu acento celestial:<br>«Ven a mí, ven, que el descanso<br>Sólo en mí podrás hallar».</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 20 --></p>
-<p class="verse"><section class="song" id="song20"></p>
-<p class="verse"><h2 class="song-title">20. CUANDO ALLÁ SE PASE LISTA</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Cuando la trompeta suene<br> en aquel día final<br>Y que el alba eterna rompa en claridad,<br>Cuando las naciones salvas<br>a su patria lleguen ya,<br>Y que sea pasada lista, allí he de estar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>///Cuando allá se pase lista///<br>A mi nombre yo feliz responderé.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>En aquel día sin nieblas,<br>en qué muerte ya no habrá,<br>Y su gloria el Salvador impartirá,<br>Cuando los llamados entren<br>a su celestial hogar,<br>Y que sea pasada lista allí he de estar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Trabajemos por el Maestro,<br>desde el alba al vislumbrar,<br>Siempre hablemos de su amor y fiel bondad,<br>Cuando todo aquí fenezca<br>y nuestra obra cese ya,<br>Y que sea pasada lista, allí he de estar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 21 --></p>
-<p class="verse"><section class="song" id="song21"></p>
-<p class="verse"><h2 class="song-title">21. ¿TE SIENTES CASI?</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>¿Te sientes casi resuelto ya?<br>¿Te falta poco para creer?<br>Pues ¿por qué dices a Jesucristo?<br>“Hoy no, mañana te seguiré”</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>¿Te sientes casi resuelto ya?<br>Pues vence el casi, a Cristo ven,<br>Que hoy es tiempo, pero mañana<br>Sobrado tarde pudiera ser.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Sabes que el casi no es de valor<br>En la presencia del justo Juez<br>¡Ay del que muere casi creyendo!<br>Completamente perdido es.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 22 --></p>
-<p class="verse"><section class="song" id="song22"></p>
-<p class="verse"><h2 class="song-title">22. CLAMA ¡JESÚS! ¡JESÚS!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Oh clama en la tribulación: Jesús, Jesús<br>De todo tu corazón: Jesús, Jesús<br>Seguro que te sostendrá: Jesús, Jesús<br>El gozo y paz te dará: Jesús, Jesús</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Si quieres un buen salvador: Jesús, Jesús<br>Que ama al vil pecador: Jesús, Jesús<br>Y tiene poder de salvar: Jesús, Jesús<br>Y te quiere al cielo llevar: Jesús, Jesús</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Hay uno que puede curar: Jesús, Jesús<br>Y de corrupción librar: Jesús, Jesús<br>Solo un nos dar salvación: Jesús, Jesús<br>El gozo, la paz y el perdón: Jesús, Jesús</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Recibes en tu corazón: Jesús, Jesús<br>Así tú tendrás salvación: Jesús, Jesús<br>Recíbelo con mucho amor: Jesús, Jesús<br>Él llora por ti pecador: Jesús, Jesús</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 23 --></p>
-<p class="verse"><section class="song" id="song23"></p>
-<p class="verse"><h2 class="song-title">23. PENSANDO EN JESÚS</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>En las horas que paro pensando en Jesús<br>Tinieblas deshago y tengo la luz,<br>Qué horas divinas tan bellas a mí,<br>Jesús me invita: ¡buscad siempre a mí!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>La vida yo sigo sin ningún temor,<br>El cielo yo busco con mucho amor,<br>Que hermoso momento, que aspecto feliz,<br>A mi alma lo dice: ¡vivid junto a mí!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Del mar el bramido, del aire el langor<br>De aves el canto de dulce amor<br>Son acordes del cielo, también quiero yo,<br>Me llegan al oído, alabanzas a Dios.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Mi alma ansiosa quiere caminar<br>La senda gloriosa yo quiero mirar,<br>Es algo glorioso tan lleno de luz,<br>Misterios del cielo, revela Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 24 --></p>
-<p class="verse"><section class="song" id="song24"></p>
-<p class="verse"><h2 class="song-title">24. ANDANDO EN LA LUZ</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Vagaba yo en la oscuridad<br>Hasta que vi a Jesús,<br>Mas por su amor y su verdad<br>Me amaneció la luz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Gozo y luz hay en mi alma hoy,<br>Gozo y luz hay, ya que salvo soy;<br>Desde que a Jesús vi,<br>Y a su lado fui,<br>He sentido el gozo de su amor en mí.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Las nubes y la tempestad<br>No encubren a Jesús,<br>Y en medio de la oscuridad<br>Me gozo en su luz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Andando en la luz de Dios<br>Encuentro plena paz;<br>Voy adelante sin temor<br>Dejando el mundo atrás.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Veréle pronto tal cual es:<br>Raudal de pura luz;<br>Y eternamente gozaré<br>A causa de su cruz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 25 --></p>
-<p class="verse"><section class="song" id="song25"></p>
-<p class="verse"><h2 class="song-title">25. ¡OH, CUAN DULCE!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Oh, cuán dulce es fiar en Cristo<br>Y entregarse todo a Él,<br>Esperar en sus promesas,<br>Y en sus sendas serle fiel</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Jesucristo, Jesucristo,<br>Ya tu amor probaste en mí;<br>Jesucristo, Jesucristo,<br>Siempre quiero fiar en ti.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Es muy dulce fiar en Cristo<br>Y cumplir su voluntad,<br>No dudando su palabra,<br>Que es la luz y la verdad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Siempre es grato fiar en Cristo<br>Cuando busca el corazón<br>Los tesoros celestiales<br>De la paz y del perdón</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Siempre en ti confiar yo quiero,<br>Mi precioso Salvador;<br>En la vida y en la muerte<br>Protección me dé tu amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 26 --></p>
-<p class="verse"><section class="song" id="song26"></p>
-<p class="verse"><h2 class="song-title">26. ALLÍ NO HABRÁ TRIBULACIÓN</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>En la mansión do Cristo está<br>Allí no habrá tribulación<br>Ningún pesar, ningún dolor<br>Que me quebrante el corazón.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Allí no habrá tribulación;<br>Ningún pesar, ningún dolor<br>Y cuando este morando allá,<br>Diré que no hay tribulación</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Será muy triste estarme aquí,<br>Muy lejos, sí, del Salvador<br>Pues moran ya con él allí,<br>Los redimidos por su amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Perfecto amor encontraré,<br>En la mansión del Salvador,<br>Perfecta paz allí tendré,<br>Mejor que la que gozo hoy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Entonces, si, yo gozaré<br>De toda la felicidad,<br>Y ya con Cristo reinaré<br>Por toda la eternidad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 27 --></p>
-<p class="verse"><section class="song" id="song27"></p>
-<p class="verse"><h2 class="song-title">27. ¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>En el seno de mi alma una dulce quietud<br>Se difunde embargando mi ser<br>Una calma infinita que sólo podrán<br>Los amados de Dios comprender.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>¡Paz! ¡Paz! ¡Cuán dulce paz!<br>Es aquella que el Padre me da;<br>Yo le ruego que inunde por siempre mi ser,<br>En sus ondas de amor celestial.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>¡Qué tesoro yo tengo en la paz que me dio!<br>Y en el fondo del alma ha de estar;<br>Tan segura que nadie quitarla podrá,<br>Mientras miro los años pasar</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br> Esta paz inefable consuelo me da,<br>Descansando tan sólo en Jesús;<br>Y ningunos peligros mi vida tendrá,<br>Si me siento inundado en su luz</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Sin cesar yo medito en aquella cuidad,<br>Do al autor de la paz he de ver,<br>Y en que el himno más dulce que allí he de cantar,<br>Al estar con Jesús ha de ser:</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>5<br> Alma triste que en rudo conflicto te ves,<br>Sola y débil tu senda al seguir;<br>Haz de Cristo el Amigo que fiel siempre es,<br>Y su paz tú podrás recibir.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 28 --></p>
-<p class="verse"><section class="song" id="song28"></p>
-<p class="verse"><h2 class="song-title">28. ¡OH TU FIDELIDAD!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Oh Dios Eterno tu misericordia,<br>Ni una sombra de duda tendrá;<br>Tu compasión y bondad nunca fallan,<br>Y por los siglos el mismo serás.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Oh, tu fidelidad, Oh, tu fidelidad<br>Cada momento, la veo en mí.<br>Nada me falta, pues todo provees,<br>Grande Señor, es tu fidelidad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Flores y frutos, montañas y mares,<br>Sol, luna, estrellas en el cielo a brillar<br>Todo creaste en la tierra en los mares<br>Todo universo te viene alabar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Pleno perdón tu das, paz y esperanza<br>Cada momento me guías, Señor.<br>En el porvenir, que dulce seguranza<br>Disfrutaré de tu rico favor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 29 --></p>
-<p class="verse"><section class="song" id="song29"></p>
-<p class="verse"><h2 class="song-title">29. ACEPTA EL PERDÓN DE JESÚS</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Si tú cansado ya estás de pecar,<br>Acepta el perdón de Jesús;<br>Si vida nueva quisieres hallar,<br>Acepta el perdón de Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>No más pecar, ven a él.<br>Su amor demuestra en la cruz;<br>Es tiempo no seas infiel,<br>Acepta el perdón de Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Si vida pura tú quieres tener,<br>Acepta el perdón de Jesús;<br>Él es la fuente que limpia tu ser,<br>Acepta el perdón de Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Si tú no puedes tus luchas calmar<br>Acepta el perdón de Jesús.<br>Si tus anhelos no puedes colmar,<br>Acepta el perdón de Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Si con los santos te quieres unir,<br>Acepta el perdón de Jesús:<br>Y si a los cielos aspiras a ir,<br>Acepta el perdón de Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 30 --></p>
-<p class="verse"><section class="song" id="song30"></p>
-<p class="verse"><h2 class="song-title">30. HAY PODER EN JESÚS</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>¿Quieres ser salvo de toda maldad?<br>Tan sólo hay poder en mi Jesús;<br>¿Quieres vivir y gozar santidad?<br>Tan sólo hay poder en Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Hay poder, poder---sin igual poder,<br>En Jesús, quien murió;<br>Hay poder, poder----sin igual poder,<br>En la sangre que él vertió.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>¿Quieres ser libre de orgullo y pasión?<br>Tan sólo hay poder en mi Jesús;<br>¿Quieres vencer toda cruel tentación?<br>Tan sólo hay poder en Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>¿Quieres servir a tu Rey y Señor?<br>Tan sólo hay poder en mi Jesús;<br>Ven, y ser salvo podrás en su amor,<br>Tan sólo hay poder en Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 31 --></p>
-<p class="verse"><section class="song" id="song31"></p>
-<p class="verse"><h2 class="song-title">31. CRISTO ES MI DULCE SALVADOR</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Cristo es mi dulce Salvador,<br>Mi bien, mi paz, mi luz;<br>Mostróme su infinito amor.<br>Muriendo en dura cruz.<br>Cuando estoy triste encuentro en él<br>Consolador y amigo fiel;<br>Consolador, amigo fiel, es Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Cristo es mi dulce Salvador;<br>Su sangre me compró;<br>Con sus heridas y dolor,<br>Perfecta paz me dio.<br>Dicha inmortal allá tendré,<br>Con Cristo siempre reinaré;<br>Dicha inmortal allá tendré con Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Cristo es mi dulce Salvador,<br>Mi eterno Redentor;<br>Oh, Nunca yo podré pagar<br>La deuda de su amor.<br>Le seguiré, pues, en la luz;<br>No temeré llevar su cruz;<br>No temeré llevar la cruz de Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Cristo es mi dulce Salvador,<br>Por él salvado soy,<br>La Roca de la eternidad,<br>En quien seguro estoy.<br>Gloria inmortal allá tendré,<br>Con Cristo siempre reinaré;<br>Gloria inmortal allá tendré con Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 32 --></p>
-<p class="verse"><section class="song" id="song32"></p>
-<p class="verse"><h2 class="song-title">32. ¡LOORES A DIOS!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>¡Oh! jamás nos cansaremos de la gran canción<br>¡Loores a Dios, aleluya!<br>Por la fe la cantaremos con el corazón,<br>¡Loores a Dios, aleluya!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br> A los hijos del Señor, pertenece el cantar<br>Pues vendrá el Salvador y nos arrebatará;<br>Del palacio celestial, gozaremos más allá.<br>¡Loores a Dios, aleluya!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>¡Oh! La indecible gloria del divino amor,<br>¡Loores a Dios, aleluya!,<br>Que en sus alas lleva el alma donde el Salvador,<br>¡Loores a Dios, aleluya!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>¡Que vistosos son los ángeles morando en luz!<br>¡Loores a Dios, aleluya!<br>¡Mas lucientes los creyentes al venir Jesús!<br>¡Loores a Dios, aleluya!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>¡Coronados en la gloria con el Salvador!<br>¡Loores a Dios, aleluya!<br>¡Cantaremos alabanzas del divino amor!<br>¡Loores a Dios, aleluya!</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 33 --></p>
-<p class="verse"><section class="song" id="song33"></p>
-<p class="verse"><h2 class="song-title">33. GRANDE GOZO HAY EN MI ALMA</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Grande gozo hay en mi alma hoy<br>Pues Jesús conmigo está<br>Y su paz que ya gozando estoy<br>Por siempre durará.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Grande gozo, cuan hermoso<br>Paso todo el tiempo bien feliz<br>Porque veo de Cristo la sonriente faz<br>Grande gozo siento en mí.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Hay un canto en mi alma hoy<br>Melodías a mi Rey<br>En su amor feliz y libre soy<br>Y salvo por la fe.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Paz divina hay en mi alma hoy<br>Porque Cristo me salvó<br>Las cadenas rotas ya están<br>Jesús me libertó.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Gratitud hay en mi alma hoy,<br>Y alabanzas a Jesús,<br>Por su gracia a la gloria voy,<br>Gozándome en la luz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 34 --></p>
-<p class="verse"><section class="song" id="song34"></p>
-<p class="verse"><h2 class="song-title">34. TENDRÁS QUE RENACER</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Un hombre de noche llegóse a Jesús<br>Buscando la senda de vida y de luz<br>Y Cristo le dijo: Si a Dios quieres ver<br>Tendrás que renacer.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>//Tendrás que renacer//<br>De cierto, de cierto, te digo a ti:<br>Tendrás que renacer</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Si acaso a los cielos tú quieres entrar<br>Y allí con los santos poder descansar<br>Si quieres la vida eternal obtener<br>Tendrás que renacer</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Amigo, no debes jamás desechar<br>Palabras que Cristo dignóse hablar:<br>Si tu alma no quieres llegar a perder<br>Tendrás que renacer</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Hermanos se han ido con Cristo a morar,<br>A quienes un día querrás encontrar,<br>Pues esta proclama hoy debes creer;<br>Tendrás que renacer.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 35 --></p>
-<p class="verse"><section class="song" id="song35"></p>
-<p class="verse"><h2 class="song-title">35. CANTARÉ LA MARAVILLA</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Cantaré la maravilla<br>Que Jesús murió por mí;<br>Como allá en el Calvario<br>Dio su sangre carmesí</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Oh, cantaré la bella historia<br>De Jesús mi Salvador,<br>Y con santos en la gloria,<br>A Jesús daré loor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Cristo vino a rescatarme,<br>Vil, perdido me encontró<br>Con su mano fiel y tierna,<br>Al redil él me llevó.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Mis heridas y dolores<br>El Señor Jesús sanó;<br>Del pecado y los temores<br>Su poder me libertó.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>En el río de la muerte<br>El Señor me guardará:<br>Es su amor tan fiel y fuerte,<br>Que jamás me dejará.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 36 --></p>
-<p class="verse"><section class="song" id="song36"></p>
-<p class="verse"><h2 class="song-title">36. ENTERA CONSAGRACIÓN</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Que mi vida entera esté<br>Consagrada a ti, Señor;<br>Que a mis manos pueda guiar<br>El impulso de tu amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Lávame en tu sangre, Salvador,<br>Límpiame de toda mi maldad;<br>Traigo a ti mi vida, para ser Señor,<br>Tuya por la eternidad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Que mis pies tan sólo en pos<br>De lo santo puedan ir;<br>Y que, a ti, Señor, mi voz<br>Se complazca en bendecir.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Que mi tiempo todo esté<br>Consagrado a tu loor;<br>Que mis labios al hablar<br>Hablen sólo de tu amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Toma, oh Dios, mi voluntad,<br>Y hazla tuya nada más;<br>Toma, sí, mi corazón,<br>Por tu trono lo tendrás.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>5<br>Toma tú mi amor, que hoy<br>A tus pies vengo a poner;<br>¡Toma todo lo que soy,<br>Todo tuyo quiero ser!</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 37 --></p>
-<p class="verse"><section class="song" id="song37"></p>
-<p class="verse"><h2 class="song-title">37. CUÁN GRANDE ES ÉL</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Señor mi Dios, al contemplar los cielos,<br>El firmamento y las estrellas mil.<br>Al oír tu voz en los potentes truenos<br>Y ver brillar el sol en su cenit.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Mi corazón entona la canción.<br>Cuán grande es Él, cuán grande es Él<br>Mi corazón entona la canción.<br>Cuán grande es Él, cuán grande es Él</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Al recorrer los montes y los valles<br>Y ver las bellas flores al pasar.<br>Al escuchar el canto de las aves<br>Y el murmurar el claro manantial.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Cuando recuerdo del amor divino<br>Que desde el cielo al Salvador envió.<br>Aquel Jesús que por salvarme vino<br>En una cruz sufrió por mi murió.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 38 --></p>
-<p class="verse"><section class="song" id="song38"></p>
-<p class="verse"><h2 class="song-title">38. LA CRUZ ME GUIARÁ</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Al Calvario solo Jesús ascendió<br>Llevando pesada cruz,<br>Y al morir en ella al mortal dejó<br>Un fanal de gloriosa luz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>La cruz sólo me guiará;<br>La cruz sólo me guiará;<br>A mi hogar de paz y eterno amor,<br>La cruz sólo me guiará.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>En la cruz el alma tan sólo hallará<br>La fuente de inspiración;<br>Nada grande y digno en el mundo habrá<br>Que en la cruz no halle aprobación.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Yo por ella voy a mi hogar celestial,<br>El rumbo marcando está;<br>En mi obscura vida será el fanal<br>Y a su luz mi alma siempre irá.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 39 --></p>
-<p class="verse"><section class="song" id="song39"></p>
-<p class="verse"><h2 class="song-title">39. SANTA BIBLIA PARA MÍ</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Santa Biblia para mí<br>Eres un tesoro aquí;<br>Tú contienes con verdad<br>La divina voluntad;<br>Tú me dices lo que soy,<br>De quién vine y a quién voy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Tú reprendes mi dudar;<br>Tú me exhortas sin cesar;<br>Eres faro que, a mi pie,<br>Va guiando por la fe<br>A las fuentes del amor<br>Del bendito Salvador.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Eres infalible voz<br>Del Espíritu de Dios,<br>Que vigor al alma da<br>Cuando en aflicción está;<br>Tú me enseñas a triunfar<br>De la muerte y el pecar.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Por tu santa letra sé<br>Que con Cristo reinaré;<br>Yo que tan indigno soy,<br>Por tu luz al cielo voy;<br>Santa Biblia para mí<br>Eres un tesoro aquí</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 40 --></p>
-<p class="verse"><section class="song" id="song40"></p>
-<p class="verse"><h2 class="song-title">40. EN LOS NEGOCIOS DEL REY</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Soy peregrino aquí, mi hogar lejano está<br>En la mansión de luz, eterna paz y amor:<br>Embajador yo soy del reino celestial<br>En los negocios de mi Rey.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Este mensaje fiel oíd.<br>Que digo ya celeste voz:<br>Reconciliados ya, dice el Señor mi Rey,<br>¡Reconciliaos hoy con Dios!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Que del pecado vil arrepentido ya.<br>Han de reinar con él los que obedientes son:<br>Es el mensaje fiel que debo proclamar.<br>En los negocios de mi Rey</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Mi hogar más bello es que el Valle de Sarón,<br>Eterno gozo y paz reinan por siempre en él,<br>Y allí Jesús dará eterna habitación;<br>Es el mensaje de mi Rey.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 41 --></p>
-<p class="verse"><section class="song" id="song41"></p>
-<p class="verse"><h2 class="song-title">41. OH, BUEN MAESTRO DESPIERTA</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>¡Oh, buen Maestro despierta!<br>¡Ve, ruge la tempestad!<br>La gran extensión de los cielos<br>Se llena de oscuridad<br>¿No ves que aquí perecemos?<br>¿Puedes dormir así?<br>Cuando el mar agitado nos abre<br>Profundo sepulcro aquí</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Los vientos, las olas oirán tu voz:<br>Haya paz<br>Calma las iras del negro mar;<br>Las luchas del alma las haces cesar,<br>Y así la barquilla do va el Señor<br>Hundirse no puede en el mar traidor.<br>Doquier se cumple su voluntad:<br>Haya paz, haya paz.<br>Tu voz resuena en la inmensidad<br>Paz, haya paz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Despavorido, oh Maestro,<br>Te busco con ansiedad.<br>Mi alma angustiada se abate;<br>Arrecia la tempestad.<br>Pasa el pecado a torrentes<br>Sobre mi frágil ser,<br>Y perezco, perezco, Maestro,<br>¡Oh, quiéreme socorrer!</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Vino la calma, Maestro.<br>Los vientos no rugen ya.<br>Y sobre el cristal de las aguas<br>El sol resplandecerá.<br>Cristo, prolonga esta calma;<br>No me abandones más;<br>Cruzaré los abismos contigo<br>Al puerto de eterna paz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 42 --></p>
-<p class="verse"><section class="song" id="song42"></p>
-<p class="verse"><h2 class="song-title">42. HAY UN PRECIOSO MANANTIAL</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Hay un precioso manantial<br>De sangre de Emmanuel,<br>Que purifica a cada cual<br>//Que se sumerge en él//<br>Que purifica a cada cual<br>Que se sumerge en él</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>El malhechor se convirtió<br>Pendiente de una cruz:<br>El vio la fuente y se lavó,<br>//Creyendo en Jesús//<br>El vio la fuente y se lavó,<br>Creyendo en Jesús</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Y yo también mi pobre ser<br>Allí logre lavar:<br>La gloria de su gran poder<br>//Me gozo ensalzar//<br>La gloria de su gran poder<br>Me gozo ensalzar</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>¡Eterna fuente carmesí!<br>¡Raudal de puro amor!<br>Se lavará por siempre en ti<br>//El pueblo de Señor//<br>Se lavará por siempre en ti<br>El pueblo de Señor</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 43 --></p>
-<p class="verse"><section class="song" id="song43"></p>
-<p class="verse"><h2 class="song-title">43. A JESUCRISTO VEN SIN TARDAR</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>A Jesucristo ven sin tardar,<br>Que entre nosotros hoy él está;<br>Y te convida con dulce afán,<br>Tierno diciendo: Ven.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Oh, cuán grata nuestra reunión,<br>Cuando allá, Señor, en tu mansión,<br>Contigo estemos en comunión<br>Gozando eterno bien.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Piensa que él sólo puede colmar<br>Tu triste pecho de gozo y paz;<br>Y porque anhela tu bienestar,<br>Vuelve a decirte: Ven.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Su voz escucha sin vacilar,<br>Y grato acepta lo que hoy te da.<br>Tal vez mañana no habrá lugar.<br>No te detengas, Ven.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 44 --></p>
-<p class="verse"><section class="song" id="song44"></p>
-<p class="verse"><h2 class="song-title">44. YA TODO DEJÉ</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Tan triste y tan lejos de Dios me sentí<br>Y sin el perdón de Jesús,<br>Mas cuando su voz amorosa oí<br>Que dijo: Oh, ven a la luz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Ya todo dejé, para andar en luz<br>No moro en tinieblas ya más;<br>Ya todo dejé por seguir a Jesús,<br>Y vivo en la luz de su faz</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Que amigo tan dulce es el tierno Jesús<br>Tan lleno de paz y de amor,<br>De todo este mundo es la fúlgida luz<br>El nombre del buen Salvador.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>De mi alma el anhelo por siempre será<br>Mas cerca vivir de la cruz,<br>Do santo poder y pureza me da,<br>La sangre de Cristo Jesús</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Oh, ven a Jesús, infeliz pecador,<br>No vagues a ciegas ya más;<br>Si, ven a Jesús, nuestro gran Salvador,<br>En él salvación hallarás.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 45 --></p>
-<p class="verse"><section class="song" id="song45"></p>
-<p class="verse"><h2 class="song-title">45. ¿ERES LIMPIO EN LA SANGRE?</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>¿Has hallado en Cristo plena salvación?<br>¿Por la sangre que Cristo vertió?<br>Toda mancha lava de tu corazón<br>¿Eres limpio en la sangre eficaz?</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>¿Eres limpio en la sangre,<br>En la sangre de Cristo Jesús?<br>¿Es tu corazón más blanco que la nieve?<br>¿Eres limpio en la sangre eficaz?</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>¿Vives siempre al lado de tu Salvador?<br>¿Por la sangre que él derramó?<br>¿Del pecado eres siempre vencedor?<br>¿Eres limpio en la sangre eficaz?</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>¿Tendrás ropa blanca al venir Jesús?<br>¿Eres limpio en la fuente de amor?<br>¿Estás listo para la mansión de luz?<br>¿Eres limpio en la sangre eficaz?</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Cristo ofrece hoy pureza y poder,<br>¡Oh, acude a la cruz del Señor!<br>Él la fuente es que, limpiará tu ser,<br>¡Oh, acude a su sangre eficaz!</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 46 --></p>
-<p class="verse"><section class="song" id="song46"></p>
-<p class="verse"><h2 class="song-title">46. LA ROCA ETERNA</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Un Salvador tierno es Cristo Jesús<br>Pues él mi alma salvó<br>También mis pecados, llevó sobre sí<br>En la cruz cuando me rescató.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>En la Roca eterna firmado estoy,<br>Y tengo la salvación.<br>Bajo su abrigo Jesús me escondió<br>Velándome con su amor,<br>Velándome con su amor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>La gracia sin fin disfrutando estoy<br>En Cristo el hijo de Dios<br>Alegre yo vivo y ando en la luz,<br>Yo sigo a mi Salvador.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Las cargas que tuve, Jesús las tomó<br>Ahora liberto estoy<br>La gracia me basta que Cristo me dio<br>Así subiré, listo voy.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Al fin de mi vida por fin lo veré.<br>Con santos en puro fulgor<br>E himnos de gloria yo entonaré<br>A quien por mi todo entregó.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 47 --></p>
-<p class="verse"><section class="song" id="song47"></p>
-<p class="verse"><h2 class="song-title">47. DONDEQUIERA CON JESÚS</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>A cualquiera parte sin temor iré<br>Sí Jesús dirige mi inseguro pie;<br>Sin su compañía todo es pavor<br>Mas si él me guía no tendré temor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Con Jesús, por doquier, sin temor iré;<br>Si Jesús me guía nada temeré.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Con Jesús por guía donde quiera voy;<br>Caminando en pos de él seguro estoy,<br>Y aunque padre y madre me puedan faltar,<br>Jesucristo nunca me abandonará.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Dondequiera con Jesús, en tierra y mar,<br>Quiero ser su fiel testigo sin cesar:<br>Y si por desierto mi camino va,<br>Un seguro albergue mi Jesús será.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Dondequiera paso yo la noche atroz,<br>Porque siempre oigo su benigna voz,<br>Él de día y noche a mi lado está,<br>Y en plena gloria me despertará.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 48 --></p>
-<p class="verse"><section class="song" id="song48"></p>
-<p class="verse"><h2 class="song-title">48. ERA UN PECADOR</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Era un pecador, andaba sin Jesús<br>No tenía esperanza, ni divina luz<br>Hoy soy redimido, Cristo me salvó<br>Con su sangre me lavó</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Que amor me concedió Jesús<br>Gozo santo y gloriosa luz<br>Cristo, pronto, del cielo bajará<br>Y con él, entonces, me llevará.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>El Consolador ya vino en mí habitar<br>La palabra santa vino iluminar<br>Quiero ser guiado por tan clara luz<br>Que brilló desde la cruz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Ven, Jesús amado, ven sin demorar<br>Yo estoy ansioso en el cielo entrar<br>Ven sin más tardanza, haz rayar la luz<br>Ahora ven Señor Jesús.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>¿Quieres, pecador, gozar la salvación?<br>¡Ven a Cristo, hoy, a recibir perdón!<br>Cristo te recibe, pobre pecador,<br>¡En sus brazos de amor!</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 49 --></p>
-<p class="verse"><section class="song" id="song49"></p>
-<p class="verse"><h2 class="song-title">49. ¡EN LA VIÑA DEL SEÑOR!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Yo quiero trabajar por el Señor,<br>Confiando en su palabra y en su amor,<br>Quiero yo cantar y orar,<br>Y ocupado siempre estar<br>En la viña del Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>Trabajar y orar,<br>En la viña, en la viña del Señor;<br>Sí, mi anhelo es orar,<br>Y ocupado siempre estar,<br>En la viña del Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Yo quiero cada día trabajar,<br>Y esclavos del pecado libertar.<br>Conducirlos a Jesús,<br>Nuestro Guía, nuestra Luz,<br>En la viña del Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Yo quiero ser obrero de valor,<br>Confiando en el poder del Salvador;<br>El que quiera trabajar<br>Hallará también lugar<br>En la viña del Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Canción 50 --></p>
-<p class="verse"><section class="song" id="song50"></p>
-<p class="verse"><h2 class="song-title">50. TE LOAMOS, ¡OH DIOS!</h2></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>1<br>Te loamos, oh Dios,<br>Con unánime voz,<br>Que, en Cristo, tu Hijo,<br>Nos diste perdón.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="chorus"></p>
-<p class="verse"><p>CORO<br>¡Aleluya! Te alabamos,<br>¡Cuán grande es tu amor!<br>¡Aleluya! Te adoramos<br>Bendito Señor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>2<br>Te loamos, Jesús,<br>Quien tu trono de luz<br>Has dejado por darnos<br>Salud en la cruz.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>3<br>Te damos loor,<br>Santo Consolador,<br>Que nos llenas de gozo<br>Y santo valor.</p></p>
-<p class="verse"></div></p>
-<p class="verse"><div class="verse"></p>
-<p class="verse"><p>4<br>Unidos load,<br>A la gran Trinidad,<br>Que es la fuente de gracia,<br>Virtud y verdad.</p></p>
-<p class="verse"></div></p>
-<p class="verse"></section></p>
-<p class="verse"><!-- Agrega más canciones aquí --></p>
-<p class="verse"></ul></p>
-<p class="verse"></main></p>
-<p class="verse"><script src="scripts.js"></script></p>
-<p class="verse"></body></p>
-<p class="verse"></html></p></div>
+    <main id="songs">
+        
+	<!-- Canción 1 -->
+	<section class="song" id="song1">
+            <h2 class="song-title">1. EL APOSENTO ALTO</h2>
+            <div class="verse">
+                <p>1<br>En un aposento alto,<br>Con unánime fervor<br>Ciento veinte esperaban<br>La promesa del Señor</p>
+            </div>
+            <div class="chorus">
+                <p>CORO<br>///Dios manda tu gran poder///<br>A cada corazón</p>
+            </div>
+            <div class="verse">
+                <p>2<br>Con estruendo de los cielos<br>Descendió la gran virtud;<br>Todos fueron bautizados<br>Con el Santo Espíritu</p>
+            </div>
+            <div class="verse">
+                <p>3<br>Este gran poder antiguo<br>Es del fiel, celeste don;<br>Prometido a los creyentes<br>De humilde corazón.</p>
+            </div>
+            <div class="verse">
+                <p>4<br>Dios está restituyendo<br>Este gran Pentecostés.<br>Y el Espíritu sus dones<br>Nos reparte otra vez.</p>
+            </div>
+        </section>
+        
+<!-- Canción 2 -->
+        <section class="song" id="song2">
+            <h2 class="song-title">2. LLUVIAS DE GRACIAS</h2>
+            <div class="verse">
+                <p>1<br>Dios nos ha dado promesa;<br>Lluvias de gracia enviaré,<br>Dones que os den fortaleza;<br>Gran bendición os daré.</p>
+            </div>
+            <div class="chorus">
+                <p>CORO<br>Lluvias de gracia,<br>Lluvias pedimos, Señor,<br>Mándanos lluvias copiosas,<br>Lluvias del Consolador.</p>
+            </div>
+            <div class="verse">
+                <p>2<br>Cristo nos dio la promesa,<br>Del Santo Consolador,<br>Dándonos paz y pureza,<br>Para su gloria y honor.</p>
+            </div>
+            <div class="verse">
+                <p>3<br>¡Oh Dios, a todo creyente,<br>Muestra tu amor y poder!<br>Tú eres de gracia la fuente,<br>Llena de paz nuestro ser.</p>
+            </div>
+            <div class="verse">
+                <p>4<br>Obra en tus siervos piadosos<br>Celo, virtud y valor,<br>Dándonos dones preciosos,<br>Dones del Consolador.</p>
+            </div>
+        </section>
+        
+<!-- Canción 3 -->
+        <section class="song" id="song3">
+            <h2 class="song-title">3. JESÚS VENDRÁ OTRA VEZ</h2>
+            <div class="verse">
+                <p>1<br>Yo espero el día alegre cuando Cristo volverá,<br>Pues vendrá al mundo pronto y nos arrebatará;<br>¡Oh, qué gozo este pensamiento a mi alma da:<br>¡El que Cristo venga al mundo otra vez!</p>
+            </div>
+            <div class="chorus">
+                <p>CORO<br>¡Oh! Jesús vendrá al mundo otra vez,<br>Sí, Jesús vendrá al mundo otra vez;<br>Le veremos en las nubes con los ángeles de luz,<br>Cuando Cristo venga al mundo otra vez.</p>
+            </div>
+            <div class="verse">
+                <p>2<br>La venida de Jesús será el remedio del dolor,<br>Que aflige siempre a este pobre mundo pecador;<br>Toda lágrima se enjugará por nuestro Salvador,<br>Cuando Cristo venga al mundo otra vez.</p>
+            </div>
+            <div class="verse">
+                <p>3<br>Llegarán los santos a Sion con gozo eternal;<br>Y en todo el santo monte nada daña ni hace mal,<br>Pues conocerán a Dios, entonces, todos por igual,<br>Cuando Cristo venga al mundo otra vez.</p>
+            </div>
+            <div class="verse">
+                <p>4<br>El pecado, pena y muerte en este mundo cesarán<br>Mártires y santos con Jesús por siempre reinarán,<br>Cada alma gozará de paz perfecta, sin afán,<br>Cuando Cristo venga al mundo otra vez.</p>
+            </div>
+        </section>
+        
+<!-- Canción 4 -->
+        <section class="song" id="song4">
+            <h2 class="song-title">4. DULCE COMUNIÓN</h2>
+            <div class="verse">
+                <p>1<br>Dulce comunión la que gozo ya<br>En los brazos de mi Salvador.<br>¡Qué gran bendición en su paz me da!<br>¡Oh!, yo siento en mí su tierno amor</p>
+            </div>
+            <div class="chorus">
+                <p>CORO<br>Libre, salvo, del pecado y del temor,<br>Libre, salvo, en los brazos de mi Salvador.</p>
+            </div>
+            <div class="verse">
+                <p>2<br> ¡Cuán dulce es vivir, cuán dulce es gozar!<br>En los brazos de mi Salvador<br>Allí quiero ir y con Él morar,<br>Siendo objeto de su tierno amor.</p>
+            </div>
+            <div class="verse">
+                <p>3<br>No hay que temer, ni que desconfiar,<br>en los brazos de mi Salvador.<br>Por su gran poder Él me guardará<br>de los lazos del engañador.</p>
+            </div>
+        </section>
+        
+<!-- Canción 5 -->
+        <section class="song" id="song5">
+            <h2 class="song-title">5. DESDE QUE SALVO ESTOY</h2>
+            <div class="verse">
+                <p>1<br>Yo tengo un himno de loor,<br>Desde que salvo estoy,<br>Para mi Rey, mi Salvador,<br>Desde que salvo estoy.</p>
+            </div>
+            <div class="chorus">
+                <p>CORO<br>Desde que salvo estoy<br>Desde que salvo estoy<br>Sólo en él me gloriaré;<br>Desde que salvo estoy,<br>En mi Salvador me gloriaré.</p>
+            </div>
+            <div class="verse">
+                <p>2<br>Yo tengo un Cristo, y mi ansiedad<br>Desde que salvo estoy,<br>Está en cumplir su voluntad<br>Desde que salvo estoy.</p>
+            </div>
+            <div class="verse">
+                <p>3<br>Yo tengo un gozo que él me dio,<br>Desde que salvo estoy,<br>Cuando en su sangre me lavó<br>Desde que salvo estoy.</p>
+            </div>
+            <div class="verse">
+                <p>4<br>Tengo un hogar a donde iré,<br>Desde que salvo estoy,<br>Y allí seguro viviré<br>Desde que salvo estoy.</p>
+            </div>
+        </section>
+           
+<!-- Canción 6 -->
+           <section class="song" id="song6"> 
+		<h2 class="song-title">6. HABLA JESÚS QUERIDO</h2> 
+		<div class="verse"> 
+			<p>1<br>Habla, Jesús querido; ¡háblame hoy sí!<br>Habla con tu gran bondad; queda cerca de mí<br>Mi corazón abierto está, para tu voz oír<br>Lléname de alabanzas y gozo para servir.</p> 
+			</div> 
+			<div class="chorus">
+			 <p>CORO<br>Háblame suavemente, habla con mucho amor<br>Vencedor para siempre, lléname de gozo<br>Háblame cada día por el Consolador<br>Oír tu voz necesito y te busco con fervor.</p> 
+			</div>
+ 		<div class="verse">
+		<p>2<br>Hacia tus hijos habla en buen camino estoy<br>Por tu bondad nos guía en pedirte el santo don<br>Queremos consagrarnos y tú presencia buscar<br>Fielmente obedecerte y siempre adorar.</p> 
+		</div> 
+		<div class="verse"> 
+		<p>3<br>Como el tiempo antiguo tu ley mandaste seguir<br>Muéstranos tu voluntad para irnos hacia ti<br>Déjame engrandecerte quiero a ti alabar<br>Cantar alegremente siempre te quiero honrar.</p>
+           </div>
+        </section>
 
+	<!-- Canción 7 -->
+<section class="song" id="song7">
+    <h2 class="song-title">7. TODO A CRISTO YO ME RINDO</h2>
+    <div class="verse">
+        <p>1<br>Todo a Cristo yo me rindo<br>Con el fin de serle fiel;<br>Para siempre quiero amarle,<br>Y agradarle sólo a él.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Yo me rindo a él,<br>Yo me rindo a él,<br>Todo a Cristo yo me entrego,<br>Quiero serle fiel.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Todo a Cristo yo me rindo,<br>A sus pies postrado estoy,<br>Los placeres he dejado,<br>Y le sigo desde hoy.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Todo a Cristo yo me rindo,<br>Sí, de todo corazón;<br>Yo le entrego alma y cuerpo,<br>Busco hoy su santa unción.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Todo a Cristo he rendido,<br>Siento el fuego de su amor,<br>¡Oh, que gozo hay en mi alma!<br>¡Gloria, gloria a mi Señor!</p>
+    </div>
+</section>
+
+<!-- Canción 8 -->
+<section class="song" id="song8">
+    <h2 class="song-title">8. LA SIEMBRA</h2>
+    <div class="verse">
+        <p>1<br>Sembraré la simiente preciosa<br>Del glorioso evangelio de amor;<br>Sembraré, sembraré mientras viva,<br>Dejaré el resultado al Señor.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Sembraré, sembraré,<br>Mientras viva simiente de amor.<br>Segaré, segaré,<br>Al hallarme en la casa de Dios.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Sembraré en corazones sensibles<br>La doctrina del Dios de perdón;<br>Sembraré, sembraré mientras viva,<br>Dejaré el resultado al Señor.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Sembraré en corazones de mármol<br>La bendita palabra de Dios;<br>Sembraré, sembraré mientras viva,<br>Dejaré el resultado al Señor.</p>
+    </div>
+</section>
+
+<!-- Canción 9 -->
+<section class="song" id="song9">
+    <h2 class="song-title">9. GLORIA SIN FIN</h2>
+    <div class="verse">
+        <p>1<br>Cuando mis luchas terminen aquí<br>Y ya seguro en los cielos esté;<br>cuando al Señor mire cerca de mí,<br>¡Por las edades mi gloria será!</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>¡Esa será, gloria sin fin,<br>gloria sin fin, gloria sin fin!<br>Cuando por gracia su faz pueda ver,<br>¡Esa mi gloria sin fin ha de ser!</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Cuando por gracia yo pueda tener<br>En sus mansiones morada de paz,<br>Y que allí siempre su faz pueda ver,<br>¡Por las edades mi gloria será!</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Gozo infinito será contemplar,<br>Todos los seres que yo tanto amé;<br>Más la presencia de Cristo gozar,<br>¡Por las edades mi gloria será!</p>
+    </div>
+</section>
+
+<!-- Canción 10 -->
+<section class="song" id="song10">
+    <h2 class="song-title">10. CRISTO QUIERE LIMPIOS CORAZONES</h2>
+    <div class="verse">
+        <p>1<br>Cristo busca limpios corazones,<br>Que le sirvan siempre con fidelidad;<br>Que a los pecadores insten fervorosos<br>Que se vuelvan del pecado a la verdad.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Id a trabajar allá en los campos del Señor,<br>Que para la siega se presentan blancos hoy<br>Oh, fieles siervos de Dios,<br>A quien debéis todo honor,<br>Oíd su voz, salid a trabajar.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Labios puros Cristo necesita,<br>Que con gozo anuncien plena salvación;<br>Lenguas consagradas sólo a su servicio,<br>Que proclamen al cautivo redención.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Cristo busca manos bien dispuestas<br>Para trabajar con buena voluntad;<br>Siembras ya maduras piden vuestra ayuda,<br>Las doradas mieses pronto cosechad.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Vidas santas Cristo necesita,<br>Que a los pecadores muestren su poder;<br>Libres de ansiedades, en Jesús confiadas<br>Y que pueda de ellas siempre disponer.</p>
+    </div>
+</section>
+
+<!-- Canción 11 -->
+<section class="song" id="song11">
+    <h2 class="song-title">11. CARIÑOSO SALVADOR</h2>
+    <div class="verse">
+        <p>1<br>Cariñoso Salvador,<br>Huyo de la tempestad<br>A tu seno protector,<br>Fiándome de tu bondad.<br>Sálvame, Señor Jesús,<br>De las olas del turbión;<br>Hasta el puerto de salud<br>Guía mi pobre embarcación.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Otro asilo ninguno hay,<br>Indefenso acudo a ti;<br>Mi necesidad me trae,<br>Porque mi peligro vi.<br>Solamente en ti, Señor,<br>Hallo paz, consuelo y luz;<br>Vengo con ferviente amor<br>A los pies de mi Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Cristo, encuentro todo en ti,<br>Y no necesito más;<br>Caído, me pusiste en pie,<br>Débil, ánimo me das.<br>Al enfermo das salud,<br>Das la vista al que no ve.<br>Con amor y gratitud<br>Tu bondad ensalzaré.</p>
+    </div>
+</section>
+
+<!-- Canción 12 -->
+<section class="song" id="song12">
+    <h2 class="song-title">12. ROCA DE LA ETERNIDAD</h2>
+    <div class="verse">
+        <p>1<br>Roca de la eternidad,<br>Fuiste abierta para mí,<br>Sé mi escondedero fiel,<br>Solo encuentro paz en ti,<br>Rico, limpio manantial,<br>En el cual lavado fui.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Aunque fuese siempre fiel,<br>Aunque llore sin cesar.<br>Del pecado no podré,<br>Justificación lograr,<br>Sólo en ti teniendo fe,<br>Deuda tal podré pagar.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Mientras tenga que vivir,<br>Mi último suspiro al dar<br>Cuando vaya a responder<br>En tu augusto tribunal,<br>Sé mi escondedero fiel,<br>Roca de la eternidad.</p>
+    </div>
+</section>
+
+<!-- Canción 13 -->
+<section class="song" id="song13">
+    <h2 class="song-title">13. DULCE ORACIÓN</h2>
+    <div class="verse">
+        <p>1<br>Dulce oración, dulce oración,<br>De toda influencia mundanal<br>Elevas tú mi corazón,<br>Al tierno Padre celestial.<br>¡Oh! cuántas veces tuve en ti<br>Auxilio en ruda tentación,<br>Y cuantos bienes recibí,<br>Mediante ti, dulce oración.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Dulce oración, dulce oración,<br>Al trono excelso de bondad.<br>Tú llevarás mi petición a Dios<br>Que escucha con piedad;<br>Por fe espero recibir<br>La gran divina bendición.<br>Y siempre a mi Señor servir<br>Por tu virtud, dulce oración.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Dulce oración, dulce oración,<br>Que aliento y gozo al alma das,<br>En esta tierra de aflicción<br>Consuelo siempre me serás.<br>Hasta el momento en que veré<br>Francas las puertas de Sión,<br>Entonces me despediré<br>Feliz, de ti, dulce oración.</p>
+    </div>
+</section>
+
+<!-- Canción 14 -->
+<section class="song" id="song14">
+    <h2 class="song-title">14. ¡OH QUE AMIGO!</h2>
+    <div class="verse">
+        <p>1<br>¡Oh qué amigo nos es Cristo!<br>Él llevó nuestro dolor,<br>Y nos manda que llevemos<br>Todo a Dios en oración.<br>¿Vive el hombre desprovisto<br>de paz, gozo y santo amor?<br>Esto es porque no llevamos<br>Todo a Dios en oración.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>¿Vives débil y cargado<br>De cuidados y temor?<br>A Jesús, refugio eterno,<br>Dile todo en oración.<br>¿Te desprecian tus amigos?<br>Cuéntaselo en oración;<br>En sus brazos de amor tierno<br>Paz tendrá tu corazón.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Jesucristo es nuestro Amigo:<br>De esto prueba él nos dio,<br>Al sufrir el cruel castigo,<br>Que el culpable mereció;<br>Y su pueblo redimido<br>Hallará seguridad,<br>Fiando en este Amigo eterno,<br>Y esperando en su bondad.</p>
+    </div>
+</section>
+
+<!-- Canción 15 -->
+<section class="song" id="song15">
+    <h2 class="song-title">15. FIRMES Y ADELANTE</h2>
+    <div class="verse">
+        <p>1<br>Firmes y adelante, huestes de la fe.<br>Sin temor alguno, que Jesús nos ve.<br>Jefe soberano, Cristo al frente va.<br>Y la regia enseña tremolando está.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Firmes y adelante huestes de la fe,<br>Sin temor alguno que Jesús nos ve.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Al Sagrado nombre de nuestro Adalid,<br>Tiembla el enemigo y huye de la lid.<br>Nuestra es la victoria, dad a Dios loor,<br>Y óigalo el averno, lleno de pavor.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Muévase potente la Iglesia de Dios,<br>De los ya gloriosos marchamos en pos,<br>Somos sólo un cuerpo, y uno es el Señor,<br>Una la esperanza, y uno nuestro amor.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Tronos y coronas pueden perecer,<br>De Jesús la Iglesia fiel habrá de ser,<br>Nada en contra suya, prevalecerá,<br>Porque la promesa nunca faltará.</p>
+    </div>
+</section>
+
+<!-- Canción 16 -->
+<section class="song" id="song16">
+    <h2 class="song-title">16. CERCA DE TI, SEÑOR</h2>
+    <div class="verse">
+        <p>1<br>Cerca de ti Señor<br>Quiero morar;<br>Tu grande, tierno amor<br>Quiero gozar.<br>Llena mi pobre ser,<br>Limpia mi corazón<br>Hazme tu rostro ver<br>En comunión.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Pasos inciertos doy,<br> El sol se va;<br>Más si contigo estoy,<br> no temo ya.<br>Himnos de gratitud,<br>ferviente cantaré<br>Y fiel a ti, Jesús,<br>Siempre seré.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Día feliz veré<br>Creyendo en ti,<br>En que yo habitaré,<br>Cerca de ti.<br>Mi voz alabará,<br>Tu dulce nombre allí,<br>Y mi alma gozará,<br>Cerca de ti.</p>
+    </div>
+</section>
+
+<!-- Canción 17 -->
+<section class="song" id="song17">
+    <h2 class="song-title">17. MI FE ESPERA EN TI</h2>
+    <div class="verse">
+        <p>1<br>Mi fe espera en ti,<br>Cordero, quien por mí<br>fuiste a la cruz.<br>Escucha mi oración,<br>dame tu bendición;<br>llene mi corazón tu santa luz.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Tu gracia en mi alma pon;<br>guarde mi corazón<br>tu sumo amor.<br>Tu sangre carmesí<br>diste en la cruz por mí;<br>que viva para ti, con fiel ardor.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>A ruda lid iré,<br>y pruebas hallaré;<br>mi guía sé.<br>Líbrame de ansiedad,<br>guárdame en santidad,<br>y por la eternidad te alabaré.</p>
+    </div>
+</section>
+
+<!-- Canción 18 -->
+<section class="song" id="song18">
+    <h2 class="song-title">18. GRATO ES DECIR LA HISTORIA</h2>
+    <div class="verse">
+        <p>1<br>Grato es decir la historia<br>Del celestial favor,<br>De Cristo y de su gloria,<br>De Cristo y de su amor.<br>Me agrada referirla,<br>Pues sé que es la verdad;<br>Y nada satisface<br>Cual ella mi ansiedad.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>¡Cuán bella es esta historia!<br>Mi tema allá en la gloria<br>Será la antigua historia<br>De Cristo y de su amor.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Grato es decir la historia<br>Que billa cual fanal,<br>Y en glorias y portentos<br>No reconoce igual;<br>Me agrada referirla,<br>Pues me hace mucho bien,<br>Por eso a ti deseo,<br>Decírtela también.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Grato es decir la historia<br>que antigua, sin vejez,<br>Parece al repetirla,<br> más dulce cada vez;<br>Me agrada referirla,<br>pues hay quien nunca oyó<br>Que para hacerle salvo<br>El buen Jesús murió.</p>
+    </div>
+</section>
+
+<!-- Canción 19 -->
+<section class="song" id="song19">
+    <h2 class="song-title">19. ¿OYES CÓMO EL EVANGELIO?</h2>
+    <div class="verse">
+        <p>1<br>¿Oyes cómo el evangelio<br>al cansado ofrece paz?<br>Pues segura, oh alma mía,<br>La promesa a ti se da.<br>Bien alguno en mí no veo,<br>Corrupción tan sólo hay.<br>Yo cansado y afligido<br>Busco alivio con afán.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>En el arca la paloma<br>Encontró do reposar;<br>Para mi alma atribulada<br>El Señor arca será.<br>Combatido vengo, y crece<br>El diluvio sin cesar.<br>Ábreme, Jesús, y en vano<br>Rugirá la tempestad.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Amparada ya en tu seno<br>Puede el alma respirar;<br>El reposo que prometes<br>Siempre da segura paz.<br>¡Oh! Cuán dulce en mis oídos<br>Fue tu acento celestial:<br>«Ven a mí, ven, que el descanso<br>Sólo en mí podrás hallar».</p>
+    </div>
+</section>
+
+<!-- Canción 20 -->
+<section class="song" id="song20">
+    <h2 class="song-title">20. CUANDO ALLÁ SE PASE LISTA</h2>
+    <div class="verse">
+        <p>1<br>Cuando la trompeta suene<br> en aquel día final<br>Y que el alba eterna rompa en claridad,<br>Cuando las naciones salvas<br>a su patria lleguen ya,<br>Y que sea pasada lista, allí he de estar.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>///Cuando allá se pase lista///<br>A mi nombre yo feliz responderé.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>En aquel día sin nieblas,<br>en qué muerte ya no habrá,<br>Y su gloria el Salvador impartirá,<br>Cuando los llamados entren<br>a su celestial hogar,<br>Y que sea pasada lista allí he de estar.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Trabajemos por el Maestro,<br>desde el alba al vislumbrar,<br>Siempre hablemos de su amor y fiel bondad,<br>Cuando todo aquí fenezca<br>y nuestra obra cese ya,<br>Y que sea pasada lista, allí he de estar.</p>
+    </div>
+</section>
+
+<!-- Canción 21 -->
+<section class="song" id="song21">
+    <h2 class="song-title">21. ¿TE SIENTES CASI?</h2>
+    <div class="verse">
+        <p>1<br>¿Te sientes casi resuelto ya?<br>¿Te falta poco para creer?<br>Pues ¿por qué dices a Jesucristo?<br>“Hoy no, mañana te seguiré”</p>
+    </div>
+    <div class="verse">
+        <p>2<br>¿Te sientes casi resuelto ya?<br>Pues vence el casi, a Cristo ven,<br>Que hoy es tiempo, pero mañana<br>Sobrado tarde pudiera ser.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Sabes que el casi no es de valor<br>En la presencia del justo Juez<br>¡Ay del que muere casi creyendo!<br>Completamente perdido es.</p>
+    </div>
+</section>
+
+<!-- Canción 22 -->
+<section class="song" id="song22">
+    <h2 class="song-title">22. CLAMA ¡JESÚS! ¡JESÚS!</h2>
+    <div class="verse">
+        <p>1<br>Oh clama en la tribulación: Jesús, Jesús<br>De todo tu corazón: Jesús, Jesús<br>Seguro que te sostendrá: Jesús, Jesús<br>El gozo y paz te dará: Jesús, Jesús</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Si quieres un buen salvador: Jesús, Jesús<br>Que ama al vil pecador: Jesús, Jesús<br>Y tiene poder de salvar: Jesús, Jesús<br>Y te quiere al cielo llevar: Jesús, Jesús</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Hay uno que puede curar: Jesús, Jesús<br>Y de corrupción librar: Jesús, Jesús<br>Solo un nos dar salvación: Jesús, Jesús<br>El gozo, la paz y el perdón: Jesús, Jesús</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Recibes en tu corazón: Jesús, Jesús<br>Así tú tendrás salvación: Jesús, Jesús<br>Recíbelo con mucho amor: Jesús, Jesús<br>Él llora por ti pecador: Jesús, Jesús</p>
+    </div>
+</section>
+
+<!-- Canción 23 -->
+<section class="song" id="song23">
+    <h2 class="song-title">23. PENSANDO EN JESÚS</h2>
+    <div class="verse">
+        <p>1<br>En las horas que paro pensando en Jesús<br>Tinieblas deshago y tengo la luz,<br>Qué horas divinas tan bellas a mí,<br>Jesús me invita: ¡buscad siempre a mí!</p>
+    </div>
+    <div class="verse">
+        <p>2<br>La vida yo sigo sin ningún temor,<br>El cielo yo busco con mucho amor,<br>Que hermoso momento, que aspecto feliz,<br>A mi alma lo dice: ¡vivid junto a mí!</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Del mar el bramido, del aire el langor<br>De aves el canto de dulce amor<br>Son acordes del cielo, también quiero yo,<br>Me llegan al oído, alabanzas a Dios.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Mi alma ansiosa quiere caminar<br>La senda gloriosa yo quiero mirar,<br>Es algo glorioso tan lleno de luz,<br>Misterios del cielo, revela Jesús.</p>
+    </div>
+</section>
+
+<!-- Canción 24 -->
+<section class="song" id="song24">
+    <h2 class="song-title">24. ANDANDO EN LA LUZ</h2>
+    <div class="verse">
+        <p>1<br>Vagaba yo en la oscuridad<br>Hasta que vi a Jesús,<br>Mas por su amor y su verdad<br>Me amaneció la luz.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Gozo y luz hay en mi alma hoy,<br>Gozo y luz hay, ya que salvo soy;<br>Desde que a Jesús vi,<br>Y a su lado fui,<br>He sentido el gozo de su amor en mí.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Las nubes y la tempestad<br>No encubren a Jesús,<br>Y en medio de la oscuridad<br>Me gozo en su luz.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Andando en la luz de Dios<br>Encuentro plena paz;<br>Voy adelante sin temor<br>Dejando el mundo atrás.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Veréle pronto tal cual es:<br>Raudal de pura luz;<br>Y eternamente gozaré<br>A causa de su cruz.</p>
+    </div>
+</section>
+
+<!-- Canción 25 -->
+<section class="song" id="song25">
+    <h2 class="song-title">25. ¡OH, CUAN DULCE!</h2>
+    <div class="verse">
+        <p>1<br>Oh, cuán dulce es fiar en Cristo<br>Y entregarse todo a Él,<br>Esperar en sus promesas,<br>Y en sus sendas serle fiel</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Jesucristo, Jesucristo,<br>Ya tu amor probaste en mí;<br>Jesucristo, Jesucristo,<br>Siempre quiero fiar en ti.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Es muy dulce fiar en Cristo<br>Y cumplir su voluntad,<br>No dudando su palabra,<br>Que es la luz y la verdad.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Siempre es grato fiar en Cristo<br>Cuando busca el corazón<br>Los tesoros celestiales<br>De la paz y del perdón</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Siempre en ti confiar yo quiero,<br>Mi precioso Salvador;<br>En la vida y en la muerte<br>Protección me dé tu amor.</p>
+    </div>
+</section>
+
+<!-- Canción 26 -->
+<section class="song" id="song26">
+    <h2 class="song-title">26. ALLÍ NO HABRÁ TRIBULACIÓN</h2>
+    <div class="verse">
+        <p>1<br>En la mansión do Cristo está<br>Allí no habrá tribulación<br>Ningún pesar, ningún dolor<br>Que me quebrante el corazón.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Allí no habrá tribulación;<br>Ningún pesar, ningún dolor<br>Y cuando este morando allá,<br>Diré que no hay tribulación</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Será muy triste estarme aquí,<br>Muy lejos, sí, del Salvador<br>Pues moran ya con él allí,<br>Los redimidos por su amor.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Perfecto amor encontraré,<br>En la mansión del Salvador,<br>Perfecta paz allí tendré,<br>Mejor que la que gozo hoy.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Entonces, si, yo gozaré<br>De toda la felicidad,<br>Y ya con Cristo reinaré<br>Por toda la eternidad.</p>
+    </div>
+</section>
+
+<!-- Canción 27 -->
+<section class="song" id="song27">
+    <h2 class="song-title">27. ¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ!</h2>
+    <div class="verse">
+        <p>1<br>En el seno de mi alma una dulce quietud<br>Se difunde embargando mi ser<br>Una calma infinita que sólo podrán<br>Los amados de Dios comprender.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>¡Paz! ¡Paz! ¡Cuán dulce paz!<br>Es aquella que el Padre me da;<br>Yo le ruego que inunde por siempre mi ser,<br>En sus ondas de amor celestial.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>¡Qué tesoro yo tengo en la paz que me dio!<br>Y en el fondo del alma ha de estar;<br>Tan segura que nadie quitarla podrá,<br>Mientras miro los años pasar</p>
+    </div>
+    <div class="verse">
+        <p>3<br> Esta paz inefable consuelo me da,<br>Descansando tan sólo en Jesús;<br>Y ningunos peligros mi vida tendrá,<br>Si me siento inundado en su luz</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Sin cesar yo medito en aquella cuidad,<br>Do al autor de la paz he de ver,<br>Y en que el himno más dulce que allí he de cantar,<br>Al estar con Jesús ha de ser:</p>
+    </div>
+    <div class="verse">
+        <p>5<br> Alma triste que en rudo conflicto te ves,<br>Sola y débil tu senda al seguir;<br>Haz de Cristo el Amigo que fiel siempre es,<br>Y su paz tú podrás recibir.</p>
+    </div>
+</section>
+
+<!-- Canción 28 -->
+<section class="song" id="song28">
+    <h2 class="song-title">28. ¡OH TU FIDELIDAD!</h2>
+    <div class="verse">
+        <p>1<br>Oh Dios Eterno tu misericordia,<br>Ni una sombra de duda tendrá;<br>Tu compasión y bondad nunca fallan,<br>Y por los siglos el mismo serás.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Oh, tu fidelidad, Oh, tu fidelidad<br>Cada momento, la veo en mí.<br>Nada me falta, pues todo provees,<br>Grande Señor, es tu fidelidad.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Flores y frutos, montañas y mares,<br>Sol, luna, estrellas en el cielo a brillar<br>Todo creaste en la tierra en los mares<br>Todo universo te viene alabar.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Pleno perdón tu das, paz y esperanza<br>Cada momento me guías, Señor.<br>En el porvenir, que dulce seguranza<br>Disfrutaré de tu rico favor.</p>
+    </div>
+</section>
+
+<!-- Canción 29 -->
+<section class="song" id="song29">
+    <h2 class="song-title">29. ACEPTA EL PERDÓN DE JESÚS</h2>
+    <div class="verse">
+        <p>1<br>Si tú cansado ya estás de pecar,<br>Acepta el perdón de Jesús;<br>Si vida nueva quisieres hallar,<br>Acepta el perdón de Jesús.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>No más pecar, ven a él.<br>Su amor demuestra en la cruz;<br>Es tiempo no seas infiel,<br>Acepta el perdón de Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Si vida pura tú quieres tener,<br>Acepta el perdón de Jesús;<br>Él es la fuente que limpia tu ser,<br>Acepta el perdón de Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Si tú no puedes tus luchas calmar<br>Acepta el perdón de Jesús.<br>Si tus anhelos no puedes colmar,<br>Acepta el perdón de Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Si con los santos te quieres unir,<br>Acepta el perdón de Jesús:<br>Y si a los cielos aspiras a ir,<br>Acepta el perdón de Jesús.</p>
+    </div>
+</section>
+
+<!-- Canción 30 -->
+<section class="song" id="song30">
+    <h2 class="song-title">30. HAY PODER EN JESÚS</h2>
+    <div class="verse">
+        <p>1<br>¿Quieres ser salvo de toda maldad?<br>Tan sólo hay poder en mi Jesús;<br>¿Quieres vivir y gozar santidad?<br>Tan sólo hay poder en Jesús.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Hay poder, poder---sin igual poder,<br>En Jesús, quien murió;<br>Hay poder, poder----sin igual poder,<br>En la sangre que él vertió.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>¿Quieres ser libre de orgullo y pasión?<br>Tan sólo hay poder en mi Jesús;<br>¿Quieres vencer toda cruel tentación?<br>Tan sólo hay poder en Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>¿Quieres servir a tu Rey y Señor?<br>Tan sólo hay poder en mi Jesús;<br>Ven, y ser salvo podrás en su amor,<br>Tan sólo hay poder en Jesús.</p>
+    </div>
+</section>
+
+<!-- Canción 31 -->
+<section class="song" id="song31">
+    <h2 class="song-title">31. CRISTO ES MI DULCE SALVADOR</h2>
+    <div class="verse">
+        <p>1<br>Cristo es mi dulce Salvador,<br>Mi bien, mi paz, mi luz;<br>Mostróme su infinito amor.<br>Muriendo en dura cruz.<br>Cuando estoy triste encuentro en él<br>Consolador y amigo fiel;<br>Consolador, amigo fiel, es Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Cristo es mi dulce Salvador;<br>Su sangre me compró;<br>Con sus heridas y dolor,<br>Perfecta paz me dio.<br>Dicha inmortal allá tendré,<br>Con Cristo siempre reinaré;<br>Dicha inmortal allá tendré con Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Cristo es mi dulce Salvador,<br>Mi eterno Redentor;<br>Oh, Nunca yo podré pagar<br>La deuda de su amor.<br>Le seguiré, pues, en la luz;<br>No temeré llevar su cruz;<br>No temeré llevar la cruz de Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Cristo es mi dulce Salvador,<br>Por él salvado soy,<br>La Roca de la eternidad,<br>En quien seguro estoy.<br>Gloria inmortal allá tendré,<br>Con Cristo siempre reinaré;<br>Gloria inmortal allá tendré con Jesús.</p>
+    </div>
+</section>
+
+<!-- Canción 32 -->
+<section class="song" id="song32">
+    <h2 class="song-title">32. ¡LOORES A DIOS!</h2>
+    <div class="verse">
+        <p>1<br>¡Oh! jamás nos cansaremos de la gran canción<br>¡Loores a Dios, aleluya!<br>Por la fe la cantaremos con el corazón,<br>¡Loores a Dios, aleluya!</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br> A los hijos del Señor, pertenece el cantar<br>Pues vendrá el Salvador y nos arrebatará;<br>Del palacio celestial, gozaremos más allá.<br>¡Loores a Dios, aleluya!</p>
+    </div>
+    <div class="verse">
+        <p>2<br>¡Oh! La indecible gloria del divino amor,<br>¡Loores a Dios, aleluya!,<br>Que en sus alas lleva el alma donde el Salvador,<br>¡Loores a Dios, aleluya!</p>
+    </div>
+    <div class="verse">
+        <p>3<br>¡Que vistosos son los ángeles morando en luz!<br>¡Loores a Dios, aleluya!<br>¡Mas lucientes los creyentes al venir Jesús!<br>¡Loores a Dios, aleluya!</p>
+    </div>
+    <div class="verse">
+        <p>4<br>¡Coronados en la gloria con el Salvador!<br>¡Loores a Dios, aleluya!<br>¡Cantaremos alabanzas del divino amor!<br>¡Loores a Dios, aleluya!</p>
+    </div>
+</section>
+
+<!-- Canción 33 -->
+<section class="song" id="song33">
+    <h2 class="song-title">33. GRANDE GOZO HAY EN MI ALMA</h2>
+    <div class="verse">
+        <p>1<br>Grande gozo hay en mi alma hoy<br>Pues Jesús conmigo está<br>Y su paz que ya gozando estoy<br>Por siempre durará.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Grande gozo, cuan hermoso<br>Paso todo el tiempo bien feliz<br>Porque veo de Cristo la sonriente faz<br>Grande gozo siento en mí.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Hay un canto en mi alma hoy<br>Melodías a mi Rey<br>En su amor feliz y libre soy<br>Y salvo por la fe.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Paz divina hay en mi alma hoy<br>Porque Cristo me salvó<br>Las cadenas rotas ya están<br>Jesús me libertó.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Gratitud hay en mi alma hoy,<br>Y alabanzas a Jesús,<br>Por su gracia a la gloria voy,<br>Gozándome en la luz.</p>
+    </div>
+</section>
+
+<!-- Canción 34 -->
+<section class="song" id="song34">
+    <h2 class="song-title">34. TENDRÁS QUE RENACER</h2>
+    <div class="verse">
+        <p>1<br>Un hombre de noche llegóse a Jesús<br>Buscando la senda de vida y de luz<br>Y Cristo le dijo: Si a Dios quieres ver<br>Tendrás que renacer.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>//Tendrás que renacer//<br>De cierto, de cierto, te digo a ti:<br>Tendrás que renacer</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Si acaso a los cielos tú quieres entrar<br>Y allí con los santos poder descansar<br>Si quieres la vida eternal obtener<br>Tendrás que renacer</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Amigo, no debes jamás desechar<br>Palabras que Cristo dignóse hablar:<br>Si tu alma no quieres llegar a perder<br>Tendrás que renacer</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Hermanos se han ido con Cristo a morar,<br>A quienes un día querrás encontrar,<br>Pues esta proclama hoy debes creer;<br>Tendrás que renacer.</p>
+    </div>
+</section>
+
+<!-- Canción 35 -->
+<section class="song" id="song35">
+    <h2 class="song-title">35. CANTARÉ LA MARAVILLA</h2>
+    <div class="verse">
+        <p>1<br>Cantaré la maravilla<br>Que Jesús murió por mí;<br>Como allá en el Calvario<br>Dio su sangre carmesí</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Oh, cantaré la bella historia<br>De Jesús mi Salvador,<br>Y con santos en la gloria,<br>A Jesús daré loor.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Cristo vino a rescatarme,<br>Vil, perdido me encontró<br>Con su mano fiel y tierna,<br>Al redil él me llevó.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Mis heridas y dolores<br>El Señor Jesús sanó;<br>Del pecado y los temores<br>Su poder me libertó.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>En el río de la muerte<br>El Señor me guardará:<br>Es su amor tan fiel y fuerte,<br>Que jamás me dejará.</p>
+    </div>
+</section>
+
+<!-- Canción 36 -->
+<section class="song" id="song36">
+    <h2 class="song-title">36. ENTERA CONSAGRACIÓN</h2>
+    <div class="verse">
+        <p>1<br>Que mi vida entera esté<br>Consagrada a ti, Señor;<br>Que a mis manos pueda guiar<br>El impulso de tu amor.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Lávame en tu sangre, Salvador,<br>Límpiame de toda mi maldad;<br>Traigo a ti mi vida, para ser Señor,<br>Tuya por la eternidad.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Que mis pies tan sólo en pos<br>De lo santo puedan ir;<br>Y que, a ti, Señor, mi voz<br>Se complazca en bendecir.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Que mi tiempo todo esté<br>Consagrado a tu loor;<br>Que mis labios al hablar<br>Hablen sólo de tu amor.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Toma, oh Dios, mi voluntad,<br>Y hazla tuya nada más;<br>Toma, sí, mi corazón,<br>Por tu trono lo tendrás.</p>
+    </div>
+    <div class="verse">
+        <p>5<br>Toma tú mi amor, que hoy<br>A tus pies vengo a poner;<br>¡Toma todo lo que soy,<br>Todo tuyo quiero ser!</p>
+    </div>
+</section>
+
+<!-- Canción 37 -->
+<section class="song" id="song37">
+    <h2 class="song-title">37. CUÁN GRANDE ES ÉL</h2>
+    <div class="verse">
+        <p>1<br>Señor mi Dios, al contemplar los cielos,<br>El firmamento y las estrellas mil.<br>Al oír tu voz en los potentes truenos<br>Y ver brillar el sol en su cenit.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Mi corazón entona la canción.<br>Cuán grande es Él, cuán grande es Él<br>Mi corazón entona la canción.<br>Cuán grande es Él, cuán grande es Él</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Al recorrer los montes y los valles<br>Y ver las bellas flores al pasar.<br>Al escuchar el canto de las aves<br>Y el murmurar el claro manantial.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Cuando recuerdo del amor divino<br>Que desde el cielo al Salvador envió.<br>Aquel Jesús que por salvarme vino<br>En una cruz sufrió por mi murió.</p>
+    </div>
+</section>
+
+<!-- Canción 38 -->
+<section class="song" id="song38">
+    <h2 class="song-title">38. LA CRUZ ME GUIARÁ</h2>
+    <div class="verse">
+        <p>1<br>Al Calvario solo Jesús ascendió<br>Llevando pesada cruz,<br>Y al morir en ella al mortal dejó<br>Un fanal de gloriosa luz.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>La cruz sólo me guiará;<br>La cruz sólo me guiará;<br>A mi hogar de paz y eterno amor,<br>La cruz sólo me guiará.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>En la cruz el alma tan sólo hallará<br>La fuente de inspiración;<br>Nada grande y digno en el mundo habrá<br>Que en la cruz no halle aprobación.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Yo por ella voy a mi hogar celestial,<br>El rumbo marcando está;<br>En mi obscura vida será el fanal<br>Y a su luz mi alma siempre irá.</p>
+    </div>
+</section>
+
+<!-- Canción 39 -->
+<section class="song" id="song39">
+    <h2 class="song-title">39. SANTA BIBLIA PARA MÍ</h2>
+    <div class="verse">
+        <p>1<br>Santa Biblia para mí<br>Eres un tesoro aquí;<br>Tú contienes con verdad<br>La divina voluntad;<br>Tú me dices lo que soy,<br>De quién vine y a quién voy.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Tú reprendes mi dudar;<br>Tú me exhortas sin cesar;<br>Eres faro que, a mi pie,<br>Va guiando por la fe<br>A las fuentes del amor<br>Del bendito Salvador.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Eres infalible voz<br>Del Espíritu de Dios,<br>Que vigor al alma da<br>Cuando en aflicción está;<br>Tú me enseñas a triunfar<br>De la muerte y el pecar.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Por tu santa letra sé<br>Que con Cristo reinaré;<br>Yo que tan indigno soy,<br>Por tu luz al cielo voy;<br>Santa Biblia para mí<br>Eres un tesoro aquí</p>
+    </div>
+</section>
+
+<!-- Canción 40 -->
+<section class="song" id="song40">
+    <h2 class="song-title">40. EN LOS NEGOCIOS DEL REY</h2>
+    <div class="verse">
+        <p>1<br>Soy peregrino aquí, mi hogar lejano está<br>En la mansión de luz, eterna paz y amor:<br>Embajador yo soy del reino celestial<br>En los negocios de mi Rey.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Este mensaje fiel oíd.<br>Que digo ya celeste voz:<br>Reconciliados ya, dice el Señor mi Rey,<br>¡Reconciliaos hoy con Dios!</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Que del pecado vil arrepentido ya.<br>Han de reinar con él los que obedientes son:<br>Es el mensaje fiel que debo proclamar.<br>En los negocios de mi Rey</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Mi hogar más bello es que el Valle de Sarón,<br>Eterno gozo y paz reinan por siempre en él,<br>Y allí Jesús dará eterna habitación;<br>Es el mensaje de mi Rey.</p>
+    </div>
+</section>
+
+<!-- Canción 41 -->
+<section class="song" id="song41">
+    <h2 class="song-title">41. OH, BUEN MAESTRO DESPIERTA</h2>
+    <div class="verse">
+        <p>1<br>¡Oh, buen Maestro despierta!<br>¡Ve, ruge la tempestad!<br>La gran extensión de los cielos<br>Se llena de oscuridad<br>¿No ves que aquí perecemos?<br>¿Puedes dormir así?<br>Cuando el mar agitado nos abre<br>Profundo sepulcro aquí</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Los vientos, las olas oirán tu voz:<br>Haya paz<br>Calma las iras del negro mar;<br>Las luchas del alma las haces cesar,<br>Y así la barquilla do va el Señor<br>Hundirse no puede en el mar traidor.<br>Doquier se cumple su voluntad:<br>Haya paz, haya paz.<br>Tu voz resuena en la inmensidad<br>Paz, haya paz.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Despavorido, oh Maestro,<br>Te busco con ansiedad.<br>Mi alma angustiada se abate;<br>Arrecia la tempestad.<br>Pasa el pecado a torrentes<br>Sobre mi frágil ser,<br>Y perezco, perezco, Maestro,<br>¡Oh, quiéreme socorrer!</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Vino la calma, Maestro.<br>Los vientos no rugen ya.<br>Y sobre el cristal de las aguas<br>El sol resplandecerá.<br>Cristo, prolonga esta calma;<br>No me abandones más;<br>Cruzaré los abismos contigo<br>Al puerto de eterna paz.</p>
+    </div>
+</section>
+
+<!-- Canción 42 -->
+<section class="song" id="song42">
+    <h2 class="song-title">42. HAY UN PRECIOSO MANANTIAL</h2>
+    <div class="verse">
+        <p>1<br>Hay un precioso manantial<br>De sangre de Emmanuel,<br>Que purifica a cada cual<br>//Que se sumerge en él//<br>Que purifica a cada cual<br>Que se sumerge en él</p>
+    </div>
+    <div class="verse">
+        <p>2<br>El malhechor se convirtió<br>Pendiente de una cruz:<br>El vio la fuente y se lavó,<br>//Creyendo en Jesús//<br>El vio la fuente y se lavó,<br>Creyendo en Jesús</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Y yo también mi pobre ser<br>Allí logre lavar:<br>La gloria de su gran poder<br>//Me gozo ensalzar//<br>La gloria de su gran poder<br>Me gozo ensalzar</p>
+    </div>
+    <div class="verse">
+        <p>4<br>¡Eterna fuente carmesí!<br>¡Raudal de puro amor!<br>Se lavará por siempre en ti<br>//El pueblo de Señor//<br>Se lavará por siempre en ti<br>El pueblo de Señor</p>
+    </div>
+</section>
+
+<!-- Canción 43 -->
+<section class="song" id="song43">
+    <h2 class="song-title">43. A JESUCRISTO VEN SIN TARDAR</h2>
+    <div class="verse">
+        <p>1<br>A Jesucristo ven sin tardar,<br>Que entre nosotros hoy él está;<br>Y te convida con dulce afán,<br>Tierno diciendo: Ven.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Oh, cuán grata nuestra reunión,<br>Cuando allá, Señor, en tu mansión,<br>Contigo estemos en comunión<br>Gozando eterno bien.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Piensa que él sólo puede colmar<br>Tu triste pecho de gozo y paz;<br>Y porque anhela tu bienestar,<br>Vuelve a decirte: Ven.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Su voz escucha sin vacilar,<br>Y grato acepta lo que hoy te da.<br>Tal vez mañana no habrá lugar.<br>No te detengas, Ven.</p>
+    </div>
+</section>
+
+<!-- Canción 44 -->
+<section class="song" id="song44">
+    <h2 class="song-title">44. YA TODO DEJÉ</h2>
+    <div class="verse">
+        <p>1<br>Tan triste y tan lejos de Dios me sentí<br>Y sin el perdón de Jesús,<br>Mas cuando su voz amorosa oí<br>Que dijo: Oh, ven a la luz.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Ya todo dejé, para andar en luz<br>No moro en tinieblas ya más;<br>Ya todo dejé por seguir a Jesús,<br>Y vivo en la luz de su faz</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Que amigo tan dulce es el tierno Jesús<br>Tan lleno de paz y de amor,<br>De todo este mundo es la fúlgida luz<br>El nombre del buen Salvador.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>De mi alma el anhelo por siempre será<br>Mas cerca vivir de la cruz,<br>Do santo poder y pureza me da,<br>La sangre de Cristo Jesús</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Oh, ven a Jesús, infeliz pecador,<br>No vagues a ciegas ya más;<br>Si, ven a Jesús, nuestro gran Salvador,<br>En él salvación hallarás.</p>
+    </div>
+</section>
+
+<!-- Canción 45 -->
+<section class="song" id="song45">
+    <h2 class="song-title">45. ¿ERES LIMPIO EN LA SANGRE?</h2>
+    <div class="verse">
+        <p>1<br>¿Has hallado en Cristo plena salvación?<br>¿Por la sangre que Cristo vertió?<br>Toda mancha lava de tu corazón<br>¿Eres limpio en la sangre eficaz?</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>¿Eres limpio en la sangre,<br>En la sangre de Cristo Jesús?<br>¿Es tu corazón más blanco que la nieve?<br>¿Eres limpio en la sangre eficaz?</p>
+    </div>
+    <div class="verse">
+        <p>2<br>¿Vives siempre al lado de tu Salvador?<br>¿Por la sangre que él derramó?<br>¿Del pecado eres siempre vencedor?<br>¿Eres limpio en la sangre eficaz?</p>
+    </div>
+    <div class="verse">
+        <p>3<br>¿Tendrás ropa blanca al venir Jesús?<br>¿Eres limpio en la fuente de amor?<br>¿Estás listo para la mansión de luz?<br>¿Eres limpio en la sangre eficaz?</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Cristo ofrece hoy pureza y poder,<br>¡Oh, acude a la cruz del Señor!<br>Él la fuente es que, limpiará tu ser,<br>¡Oh, acude a su sangre eficaz!</p>
+    </div>
+</section>
+
+<!-- Canción 46 -->
+<section class="song" id="song46">
+    <h2 class="song-title">46. LA ROCA ETERNA</h2>
+    <div class="verse">
+        <p>1<br>Un Salvador tierno es Cristo Jesús<br>Pues él mi alma salvó<br>También mis pecados, llevó sobre sí<br>En la cruz cuando me rescató.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>En la Roca eterna firmado estoy,<br>Y tengo la salvación.<br>Bajo su abrigo Jesús me escondió<br>Velándome con su amor,<br>Velándome con su amor.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>La gracia sin fin disfrutando estoy<br>En Cristo el hijo de Dios<br>Alegre yo vivo y ando en la luz,<br>Yo sigo a mi Salvador.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Las cargas que tuve, Jesús las tomó<br>Ahora liberto estoy<br>La gracia me basta que Cristo me dio<br>Así subiré, listo voy.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Al fin de mi vida por fin lo veré.<br>Con santos en puro fulgor<br>E himnos de gloria yo entonaré<br>A quien por mi todo entregó.</p>
+    </div>
+</section>
+
+<!-- Canción 47 -->
+<section class="song" id="song47">
+    <h2 class="song-title">47. DONDEQUIERA CON JESÚS</h2>
+    <div class="verse">
+        <p>1<br>A cualquiera parte sin temor iré<br>Sí Jesús dirige mi inseguro pie;<br>Sin su compañía todo es pavor<br>Mas si él me guía no tendré temor.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Con Jesús, por doquier, sin temor iré;<br>Si Jesús me guía nada temeré.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Con Jesús por guía donde quiera voy;<br>Caminando en pos de él seguro estoy,<br>Y aunque padre y madre me puedan faltar,<br>Jesucristo nunca me abandonará.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Dondequiera con Jesús, en tierra y mar,<br>Quiero ser su fiel testigo sin cesar:<br>Y si por desierto mi camino va,<br>Un seguro albergue mi Jesús será.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Dondequiera paso yo la noche atroz,<br>Porque siempre oigo su benigna voz,<br>Él de día y noche a mi lado está,<br>Y en plena gloria me despertará.</p>
+    </div>
+</section>
+
+<!-- Canción 48 -->
+<section class="song" id="song48">
+    <h2 class="song-title">48. ERA UN PECADOR</h2>
+    <div class="verse">
+        <p>1<br>Era un pecador, andaba sin Jesús<br>No tenía esperanza, ni divina luz<br>Hoy soy redimido, Cristo me salvó<br>Con su sangre me lavó</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Que amor me concedió Jesús<br>Gozo santo y gloriosa luz<br>Cristo, pronto, del cielo bajará<br>Y con él, entonces, me llevará.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>El Consolador ya vino en mí habitar<br>La palabra santa vino iluminar<br>Quiero ser guiado por tan clara luz<br>Que brilló desde la cruz.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Ven, Jesús amado, ven sin demorar<br>Yo estoy ansioso en el cielo entrar<br>Ven sin más tardanza, haz rayar la luz<br>Ahora ven Señor Jesús.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>¿Quieres, pecador, gozar la salvación?<br>¡Ven a Cristo, hoy, a recibir perdón!<br>Cristo te recibe, pobre pecador,<br>¡En sus brazos de amor!</p>
+    </div>
+</section>
+
+<!-- Canción 49 -->
+<section class="song" id="song49">
+    <h2 class="song-title">49. ¡EN LA VIÑA DEL SEÑOR!</h2>
+    <div class="verse">
+        <p>1<br>Yo quiero trabajar por el Señor,<br>Confiando en su palabra y en su amor,<br>Quiero yo cantar y orar,<br>Y ocupado siempre estar<br>En la viña del Señor.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>Trabajar y orar,<br>En la viña, en la viña del Señor;<br>Sí, mi anhelo es orar,<br>Y ocupado siempre estar,<br>En la viña del Señor.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Yo quiero cada día trabajar,<br>Y esclavos del pecado libertar.<br>Conducirlos a Jesús,<br>Nuestro Guía, nuestra Luz,<br>En la viña del Señor.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Yo quiero ser obrero de valor,<br>Confiando en el poder del Salvador;<br>El que quiera trabajar<br>Hallará también lugar<br>En la viña del Señor.</p>
+    </div>
+</section>
+
+<!-- Canción 50 -->
+<section class="song" id="song50">
+    <h2 class="song-title">50. TE LOAMOS, ¡OH DIOS!</h2>
+    <div class="verse">
+        <p>1<br>Te loamos, oh Dios,<br>Con unánime voz,<br>Que, en Cristo, tu Hijo,<br>Nos diste perdón.</p>
+    </div>
+    <div class="chorus">
+        <p>CORO<br>¡Aleluya! Te alabamos,<br>¡Cuán grande es tu amor!<br>¡Aleluya! Te adoramos<br>Bendito Señor.</p>
+    </div>
+    <div class="verse">
+        <p>2<br>Te loamos, Jesús,<br>Quien tu trono de luz<br>Has dejado por darnos<br>Salud en la cruz.</p>
+    </div>
+    <div class="verse">
+        <p>3<br>Te damos loor,<br>Santo Consolador,<br>Que nos llenas de gozo<br>Y santo valor.</p>
+    </div>
+    <div class="verse">
+        <p>4<br>Unidos load,<br>A la gran Trinidad,<br>Que es la fuente de gracia,<br>Virtud y verdad.</p>
+    </div>
+</section>
+
+            <!-- Agrega más canciones aquí -->
+        </ul>
     </main>
     <script src="scripts.js"></script>
 </body>
