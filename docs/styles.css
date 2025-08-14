@@ -1,57 +1,114 @@
-/* styles.css */
 
+/* styles.css mejorado con diseño moderno y modo oscuro */
+
+/* Tipografía y fondo general */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0; 
-    background-color: #f0f0f0; 
-    text-align: center; /* Centrar el texto en el cuerpo */
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+  color: #2c3e50;
+  text-align: center;
 }
 
+/* Encabezado fijo */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    z-index: 1000; /* Asegura que esté por encima del contenido */
-	tex-align: center; /* Centra el contenido del encabezado*/
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  text-align: center;
+  padding: 10px;
 }
 
+/* Contenedor de búsqueda */
 .search-container {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 
+/* Campo de búsqueda */
 #search {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
+/* Contenido principal */
 main {
-    margin-top: 100px; /* Ajusta esto si tu header es más grande */
-	padding: 20px;
+  margin-top: 100px;
+  padding: 20px;
 }
 
+/* Estilo de cada himno */
 .song {
-    margin: 20px;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-	max-width: 800px; /* Limita el ancho máximo de cada canción */
+  background-color: #ffffff;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Título del himno */
 .song-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-	text-align: center; /* Centra el título de la canción */
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-align: center;
 }
 
-.verse, .chorus {
-    margin: 10px 0;
-	text-align: center;
+/* Versos y coros */
+.verse {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.chorus {
+  margin: 10px 0;
+  text-align: center;
+  font-style: italic;
+  color: #34495e;
+  background-color: #ecf0f1;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Modo oscuro automático según preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(to bottom, #1e1e1e, #2c3e50);
+    color: #ecf0f1;
+  }
+
+  header {
+    background-color: #2c3e50;
+    border-bottom: 1px solid #444;
+  }
+
+  #search {
+    background-color: #1e1e1e;
+    color: #ecf0f1;
+    border: 1px solid #555;
+  }
+
+  .song {
+    background-color: #2c3e50;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .song-title {
+    color: #ecf0f1;
+  }
+
+  .chorus {
+    background-color: #3c4a5a;
+    color: #ffffff;
+  }
 }
